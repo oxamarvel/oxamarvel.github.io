@@ -31,7 +31,7 @@
             padding: 0 20px;
         }
         
-        /* Navigation - Rounded Rectangle with Hover Effects */
+        /* Navigation */
         nav {
             background: rgba(44, 62, 80, 0.9);
             position: fixed;
@@ -39,16 +39,11 @@
             left: 5%;
             top: 20px;
             z-index: 100;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            backdrop-filter: blur(10px);
             border-radius: 50px;
             padding: 0 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
             transition: all 0.3s ease;
-        }
-        
-        nav:hover {
-            box-shadow: 0 6px 25px rgba(0,0,0,0.2);
-            transform: translateY(-2px);
         }
         
         .nav-container {
@@ -68,10 +63,6 @@
             transition: all 0.3s ease;
         }
         
-        .logo:hover {
-            background: rgba(255,255,255,0.15);
-        }
-        
         .nav-links {
             display: flex;
             list-style: none;
@@ -88,33 +79,23 @@
             padding: 10px 20px;
             border-radius: 30px;
             transition: all 0.3s ease;
-            display: inline-block;
             position: relative;
         }
         
-        .nav-links a::before {
+        .nav-links a.active {
+            background: rgba(52, 152, 219, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .nav-links a.active::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: 5px;
             left: 50%;
             transform: translateX(-50%);
-            width: 0;
+            width: 50%;
             height: 2px;
             background: #3498db;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            background: rgba(255,255,255,0.1);
-            transform: translateY(-3px);
-        }
-        
-        .nav-links a:hover::before {
-            width: 60%;
-        }
-        
-        .nav-links a.active {
-            background: rgba(52, 152, 219, 0.2);
         }
         
         /* Header */
@@ -135,6 +116,20 @@
             font-size: 1.2rem;
             opacity: 0.9;
         }
+
+
+        section {
+            min-height: 100vh;
+            padding: 100px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        #home {
+            background: #2c3e50;
+            color: white;
+        }
+        
         
         /* 3D Art Gallery Section */
         #gallery {
@@ -332,6 +327,9 @@
         }
     </style>
 </head>
+
+
+
 <body>
     <!-- Navigation -->
     <nav>
@@ -352,6 +350,15 @@
             <p>The Marvelous Designer and 3D Artist </p>
         </div>
     </header>
+
+
+    <section id="home">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Scroll down to view my work</p>
+        </div>
+    </section>
+    
 
     <!-- 3D Art Gallery Section -->
     <section id="gallery">
@@ -438,8 +445,55 @@
 
     
 
-    
+    <!-- Script -->
     <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            // Function to check which section is in view
+            function activateNavLink() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (window.pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            // Run on initial load
+            activateNavLink();
+            
+            // Run on scroll
+            window.addEventListener('scroll', activateNavLink);
+            
+            // Smooth scrolling for navigation
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetSection.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+        
         // Initialize Three.js scenes for each artwork
         const artworks = [
             { id: 'art1', title: 'Artwork 1' },
