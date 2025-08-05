@@ -31,22 +31,31 @@
             padding: 0 20px;
         }
         
-        /* Navigation */
+        /* Navigation - Rounded Rectangle with Hover Effects */
         nav {
             background: rgba(44, 62, 80, 0.9);
             position: fixed;
-            width: 100%;
-            top: 0;
+            width: 90%;
+            left: 5%;
+            top: 20px;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 0 25px;
+            transition: all 0.3s ease;
+        }
+        
+        nav:hover {
+            box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+            transform: translateY(-2px);
         }
         
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
+            height: 70px;
         }
         
         .logo {
@@ -54,6 +63,13 @@
             font-size: 1.5rem;
             font-weight: bold;
             text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            background: rgba(255,255,255,0.15);
         }
         
         .nav-links {
@@ -62,18 +78,43 @@
         }
         
         .nav-links li {
-            margin-left: 30px;
+            margin-left: 15px;
         }
         
         .nav-links a {
             color: #fff;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: #3498db;
+            transition: all 0.3s ease;
         }
         
         .nav-links a:hover {
-            color: #3498db;
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-3px);
+        }
+        
+        .nav-links a:hover::before {
+            width: 60%;
+        }
+        
+        .nav-links a.active {
+            background: rgba(52, 152, 219, 0.2);
         }
         
         /* Header */
@@ -297,7 +338,7 @@
         <div class="container nav-container">
             <a href="#" class="logo">[Your Name]</a>
             <ul class="nav-links">
-                <li><a href="#gallery">3D Gallery</a></li>
+                <li><a href="#gallery" class="active">3D Gallery</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
