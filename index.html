@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,19 +82,8 @@
         }
         
         .nav-links a.active {
-            background: rgba(52, 152, 219, 0.3);
+            background: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
-        }
-        
-        .nav-links a.active::after {
-            content: '';
-            position: absolute;
-            bottom: 5px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50%;
-            height: 2px;
-            background: #3498db;
         }
         
         /* Header */
@@ -117,19 +105,12 @@
             opacity: 0.9;
         }
 
-
         section {
             min-height: 100vh;
             padding: 100px 0;
             display: flex;
             align-items: center;
         }
-        
-        #home {
-            background: #2c3e50;
-            color: white;
-        }
-        
         
         /* 3D Art Gallery Section */
         #gallery {
@@ -271,18 +252,21 @@
             justify-content: center;
             flex-wrap: wrap;
             margin-top: 30px;
+            gap: 20px;
         }
         
         .contact-links a {
             color: #fff;
-            margin: 0 15px;
             font-size: 1.2rem;
             text-decoration: none;
             transition: color 0.3s;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background: rgba(255,255,255,0.1);
         }
         
         .contact-links a:hover {
-            color: #3498db;
+            background: rgba(255,255,255,0.2);
         }
         
         /* Footer */
@@ -293,18 +277,51 @@
             color: #fff;
         }
         
-        /* Mobile Styles */
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .about-content {
+                gap: 40px;
+            }
+        }
+        
         @media (max-width: 768px) {
+            nav {
+                width: 95%;
+                left: 2.5%;
+                padding: 0 15px;
+            }
+            
             .nav-container {
-                flex-direction: column;
+                height: 60px;
             }
             
             .nav-links {
-                margin-top: 15px;
+                margin-top: 10px;
             }
             
             .nav-links li {
-                margin: 0 10px;
+                margin-left: 10px;
+            }
+            
+            .nav-links a {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+            
+            header {
+                padding: 100px 0 40px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header p {
+                font-size: 1rem;
             }
             
             .gallery-container {
@@ -321,22 +338,73 @@
                 margin-bottom: 30px;
             }
             
+            .profile-img {
+                margin-top: 30px;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav {
+                width: 98%;
+                left: 1%;
+                top: 10px;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+            }
+            
+            .logo {
+                margin-bottom: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links li {
+                margin: 5px;
+            }
+            
             header {
-                padding: 140px 0 60px;
+                padding: 80px 0 30px;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .art-item {
+                height: 300px;
+            }
+            
+            .canvas-container {
+                height: 200px;
             }
         }
     </style>
 </head>
 
-
-
 <body>
     <!-- Navigation -->
     <nav>
         <div class="container nav-container">
-            <a href="#" class="logo">[Your Name]</a>
+            <a href="#" class="logo">Oxa</a>
             <ul class="nav-links">
-                <li><a href="#gallery" class="active">3D Gallery</a></li>
+                <li><a href="#gallery">3D Gallery</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -344,21 +412,12 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header id="home">
         <div class="container">
             <h1>Hi! I'm Oxa</h1>
-            <p>The Marvelous Designer and 3D Artist </p>
+            <p>The Marvelous Designer and 3D Artist</p>
         </div>
     </header>
-
-
-    <section id="home">
-        <div class="container">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Scroll down to view my work</p>
-        </div>
-    </section>
-    
 
     <!-- 3D Art Gallery Section -->
     <section id="gallery">
@@ -409,13 +468,12 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>About Me</h2>
-                    <p>Hello! I'm [Your Name], a passionate 3D artist specializing in [your specialties]. With [X] years of experience in the field, I create immersive 3D experiences that blend art and technology.</p>
-                    <p>My work focuses on [your artistic focus]. I'm proficient in tools like Blender, Maya, Three.js, and Unity, allowing me to bring my creations to life across various platforms.</p>
-                    <p>When I'm not modeling or coding, you can find me [your hobbies/interests outside work]. I'm always exploring new techniques at the intersection of art and technology.</p>
+                    <p>Hello! I'm Oxa, a passionate 3D artist specializing in character design and digital fashion. With 5 years of experience in the field, I create immersive 3D experiences that blend art and technology.</p>
+                    <p>My work focuses on bringing imaginative characters to life through detailed modeling and animation. I'm proficient in tools like Blender, Marvelous Designer, Three.js, and Unity.</p>
+                    <p>When I'm not modeling or coding, you can find me exploring new digital fashion trends or creating concept art. I'm always exploring new techniques at the intersection of art and technology.</p>
                 </div>
                 <div class="profile-img">
-                    <!-- Replace with your image path -->
-                    <img src="profile-placeholder.jpg" alt="[Your Name]">
+                    <img src="profile-placeholder.jpg" alt="Oxa">
                 </div>
             </div>
         </div>
@@ -428,7 +486,6 @@
             <p>Interested in collaborating or commissioning work? Reach out to discuss your project ideas!</p>
             <div class="contact-links">
                 <a href="mailto:oxamarvel@gmail.com">Email</a>
-                <!-- <a href="https://artstation.com/yourprofile" target="_blank">ArtStation</a> -->
                 <a href="https://linkedin.com/in/oxamarvel" target="_blank">LinkedIn</a>
                 <a href="https://instagram.com/xmrvllmnthrq" target="_blank">Instagram</a>
             </div>
@@ -441,13 +498,8 @@
             <p>&copy; <script>document.write(new Date().getFullYear())</script> Oxa Marvel. All rights reserved.</p>
         </div>
     </footer>
-    
 
-    
-
-    <!-- Script -->
     <script>
-        
         document.addEventListener('DOMContentLoaded', function() {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-links a');
@@ -680,8 +732,5 @@
             document.body.style.overflow = 'auto';
         });
     </script>
-
-    
 </body>
-    
 </html>
