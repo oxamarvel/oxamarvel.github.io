@@ -634,6 +634,7 @@
             let geometry, material, mesh;
             
             switch(containerId) {
+                    
                 case 'art1':
                     geometry = new THREE.BoxGeometry(2, 2, 2);
                     material = new THREE.MeshPhongMaterial({ 
@@ -642,6 +643,7 @@
                         shininess: 30
                     });
                     break;
+                    
                 case 'art2':
                     geometry = new THREE.SphereGeometry(1, 32, 32);
                     material = new THREE.MeshPhongMaterial({ 
@@ -650,8 +652,36 @@
                         shininess: 30
                     });
                     break;
+                    
                 case 'art3':
                     geometry = new THREE.TorusKnotGeometry(0.8, 0.3, 100, 16);
+                    material = new THREE.MeshPhongMaterial({ 
+                        color: 0x0000ff,
+                        specular: 0x111111,
+                        shininess: 30
+                    });
+                    break;
+                    
+                case 'art4':
+                    geometry = new THREE.OctahedronGeometry(0.8, 0);
+                    material = new THREE.MeshPhongMaterial({ 
+                        color: 0x0000ff,
+                        specular: 0x111111,
+                        shininess: 30
+                    });
+                    break;
+
+                case 'art5':
+                    geometry = new THREE.IcosahedronGeometry(0.8, 0);
+                    material = new THREE.MeshPhongMaterial({ 
+                        color: 0x0000ff,
+                        specular: 0x111111,
+                        shininess: 30
+                    });
+                    break;
+
+                case 'art6':
+                    geometry = new THREE.DodecahedronGeometry(0.8, 0);
                     material = new THREE.MeshPhongMaterial({ 
                         color: 0x0000ff,
                         specular: 0x111111,
