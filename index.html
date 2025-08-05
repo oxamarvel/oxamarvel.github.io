@@ -127,7 +127,7 @@
         
         .gallery-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
             gap: 30px;
             margin-top: 40px;
         }
@@ -281,7 +281,7 @@
         /* Responsive Design */
         @media (max-width: 1024px) {
             .gallery-container {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
             }
             
             .about-content {
@@ -326,7 +326,7 @@
             }
             
             .gallery-container {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* 1 column on mobile */
             }
             
             .about-content {
@@ -453,6 +453,33 @@
                         <p>Medium: Blender/Three.js</p>
                     </div>
                 </div>
+                
+                <!-- Artwork 4 (example of additional item that will create new row) -->
+                <div class="art-item">
+                    <div id="art4" class="canvas-container"></div>
+                    <div class="art-info">
+                        <h3>Artwork Title 4</h3>
+                        <p>Medium: Blender/Three.js</p>
+                    </div>
+                </div>
+                
+                <!-- Artwork 5 -->
+                <div class="art-item">
+                    <div id="art5" class="canvas-container"></div>
+                    <div class="art-info">
+                        <h3>Artwork Title 5</h3>
+                        <p>Medium: Blender/Three.js</p>
+                    </div>
+                </div>
+                
+                <!-- Artwork 6 -->
+                <div class="art-item">
+                    <div id="art6" class="canvas-container"></div>
+                    <div class="art-info">
+                        <h3>Artwork Title 6</h3>
+                        <p>Medium: Blender/Three.js</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -559,7 +586,10 @@
         const artworks = [
             { id: 'art1', title: 'Artwork 1' },
             { id: 'art2', title: 'Artwork 2' },
-            { id: 'art3', title: 'Artwork 3' }
+            { id: 'art3', title: 'Artwork 3' },
+            { id: 'art4', title: 'Artwork 4' },
+            { id: 'art5', title: 'Artwork 5' },
+            { id: 'art6', title: 'Artwork 6' }
         ];
         
         const scenes = {};
