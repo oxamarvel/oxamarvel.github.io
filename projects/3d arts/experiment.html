@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Sand Drift — Project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../css/style.css" />
+    </head>
+
+    <body>
+        <!-- Back Button -->
+        <a href="../../index.html" class="back-button">← Back</a>
+
+  <!-- Project Header -->
+  <header class="project-header">
+    <h1>Sand Drift</h1>
+    <p class="project-subtitle">
+      Terrain-driven vehicle motion study using physics-based interaction
+    </p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="project-content">
+
+    <!-- Video Section -->
+    <section class="media-section">
+      <video controls autoplay muted loop playsinline>
+        <source src="assets/videos/sand-drift-demo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Description Section -->
+    <section class="text-section">
+      <h2>Project Overview</h2>
+      <p>
+        Sand Drift explores how terrain topology influences vehicle motion and
+        player perception. The project focuses on simulating surface resistance,
+        directional slip, and momentum decay across uneven sand geometry.
+      </p>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="media-section gallery">
+      <img src="assets/images/sand_01.jpg" alt="Terrain iteration" />
+      <img src="assets/images/sand_02.jpg" alt="Shader breakdown" />
+      <img src="assets/images/sand_03.jpg" alt="Physics debug view" />
+    </section>
+
+    <!-- Process Section -->
+    <section class="text-section">
+      <h2>Process & Technical Approach</h2>
+      <p>
+        Terrain meshes were sculpted with exaggerated height variation to amplify
+        suspension response. Vehicle movement was driven by surface-normal sampling
+        combined with velocity damping, enabling slope-aware acceleration and drift.
+      </p>
+
+      <p>
+        Visual feedback was reinforced using shader-based sand deformation and
+        directional particle emission to communicate traction loss and momentum
+        transfer.
+      </p>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="project-footer">
+        <p>© 2026 Oxa Marvel Ilman Thaariq</p>
+    </footer>
+
+    </body>
+</html>
