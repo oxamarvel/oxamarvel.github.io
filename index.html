@@ -5,25 +5,30 @@
         <title>Oxa Marvel Ilman Thaariq — Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     </head>
 
     <body>
 
         <!-- Header / Bio -->
         <header class="home-header">
-            <h1>Oxa Marvel Ilman Thaariq</h1>
+            <h1 style="font-size: 200px;">Hello! I'm Oxa.</h1>
             <p class="home-role">
-                Game Artist · Technical Artist · Interactive Systems
+                3D Generalist · Technical Artist · Interactive Systems
             </p>
 
             <p class="home-bio">
                 Focused on game art, procedural visuals, and system-driven design.
-                Interested in how mechanics, physics, and visual feedback shape player perception.
+                Interested in how mechanics, physics, and visual feedback shape audience perception.
             </p>
         </header>
 
         <!-- Projects -->
         <main class="home-content">
+            
+            <h1>AREAS OF EXPERTISE</h1>
 
             <!-- 2D Artwork -->
             <section class="project-category">
@@ -92,19 +97,52 @@
 
         <!-- Contact -->
         <footer class="home-footer">
-            <h2>Contact</h2>
-            <p>
-                Email:
-                <a href="mailto:oxamarvel@gmail.com">oxamarvel@gmail.com</a>
-            </p>
 
-            <p>
-                ArtStation · GitHub · LinkedIn
-            </p>
+            <div class="footer-grid">
 
-            <p class="copyright">
-                © 2026 Oxa Marvel Ilman Thaariq
-            </p>
+                <!-- Column 1: Navigation -->
+                <div class="footer-col">
+                    <p>Home</p>
+                    <p>Works</p>
+                    <p>Contact</p>
+                </div>
+
+                <!-- Column 2: Social -->
+                <div class="footer-col">
+                    <a href="#" target="_blank">Behance</a>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">LinkedIn</a>
+                </div>
+
+                <!-- Column 3: Contact -->
+                <div class="footer-col">
+                    <p class="copy-email" data-email="oxamarvel@gmail.com">
+                        oxamarvel@gmail.com
+                    </p>
+
+                    <p class="copyright">
+                        © 2026 Oxa Marvel Ilman Thaariq
+                    </p>
+                </div>
+            </div>
         </footer>
+
+
+        <script>
+            const emailElement = document.querySelector('.copy-email');
+
+            emailElement.addEventListener('click', () => {
+                const email = emailElement.dataset.email;
+
+                navigator.clipboard.writeText(email).then(() => {
+                    emailElement.textContent = 'Email copied ✓';
+
+                    setTimeout(() => {
+                        emailElement.textContent = email;
+                    }, 2000);
+                });
+            });
+        </script>
+
     </body>
 </html>
