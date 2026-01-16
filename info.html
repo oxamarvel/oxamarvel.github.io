@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Oxa Marvel — Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+
+
+
+    <body>
+
+        <header class="header">
+            <nav class="header-grid">
+                <div class="nav-brand">
+                    <a href="index.html" class="nav-link">OXA MARVEL</a>
+                </div>
+                <div class="nav-spacer"></div>
+                <div class="nav-links">
+                    <a href="info.html" class="nav-link">INFO</a>
+                    <a href="archive.html" class="nav-link">ARCHIVE</a>
+                </div>
+            </nav>
+        </header>
+
+
+
+        <!-- Projects -->
+        <main class="home-main">
+            
+            <p class="hero-description">
+                Background in product design, game prototyping, and interactive systems, with experience across apps and game development.
+                Works at the intersection of art, tools, and gameplay to build scalable and expressive visual systems.
+            </p>
+
+            <div class="footer-contact">
+                    <p class="copy-email" data-email="oxamarvel@gmail.com">
+                        oxamarvel@gmail.com
+                    </p>
+                    
+            </div>
+        </main>
+
+
+
+        <footer class="footer">
+            <section class="footer-grid">
+                <p>© 2026</p>
+                <p>DESIGNED & DEVELOPED BY OXA MARVEL</p>
+            </section>
+        </footer>
+
+
+
+        <!-- Copy Email Script-->
+        <script>
+            const emailElement = document.querySelector('.copy-email');
+
+            emailElement.addEventListener('click', () => {
+                const email = emailElement.dataset.email;
+
+                navigator.clipboard.writeText(email).then(() => {
+                    emailElement.textContent = 'Copied!';
+
+                    setTimeout(() => {
+                        emailElement.textContent = email;
+                    }, 2000);
+                });
+            });
+        </script>
+    </body>
+</html>
