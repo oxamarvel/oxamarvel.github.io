@@ -7,13 +7,16 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     </head>
 
 
 
     <body>
 
+        <div class="grid-overlay" id="gridOverlay"></div>
+
+        
         <header class="header">
             <nav class="header-grid">
                 <div class="nav-brand">
@@ -28,20 +31,44 @@
         </header>
 
 
+        <main class="main">
+            <div class="info-grid">
+                <div class="bio-column">
+                    <h1>INFO</h1>
 
-        <!-- Projects -->
-        <main class="home-main">
-            
-            <p class="hero-description">
-                Background in product design, game prototyping, and interactive systems, with experience across apps and game development.
-                Works at the intersection of art, tools, and gameplay to build scalable and expressive visual systems.
-            </p>
+                    <h2>Who I Am</h2>
+                    <p>Background in product design, game prototyping, and interactive systems, with experience across apps and game development. Works at the intersection of art, tools, and gameplay to build scalable and expressive visual systems.</p>
+                    <h3>Career Aspiration</h3>
+                    <p>To continue innovating at the intersection of art, technology, and user experience, creating meaningful and impactful interactive systems.</p>
+                </div>
+                <div class="profile-column">
 
-            <div class="footer-contact">
-                    <p class="copy-email" data-email="oxamarvel@gmail.com">
-                        oxamarvel@gmail.com
-                    </p>
-                    
+                    <img src="images/profile.jpg" alt="Oxa Marvel" class="profile-pic">
+
+                    <div class="contact-grid">
+                        
+                        <div class="contact-card email-card">
+                            <div class="card-title">Email</div>
+                            <div class="card-notes"><span class="copy-email" data-email="oxamarvel@gmail.com">oxamarvel@gmail.com</span></div>
+                        </div>
+
+                        <a href="https://github.com/oxamarvel" target="_blank" class="contact-card">
+                            <div class="card-title">GitHub</div>
+                            <div class="card-notes">/oxamarvel</div>
+                        </a>
+
+                        <a href="https://linkedin.com/in/oxamarvel" target="_blank" class="contact-card">
+                            <div class="card-title">LinkedIn</div>
+                            <div class="card-notes">/in/oxamarvel</div>
+                        </a>
+
+                        <a href="https://behance.net/oxamarvel" target="_blank" class="contact-card">
+                            <div class="card-title">Behance</div>
+                            <div class="card-notes">/oxamarvel</div>
+                        </a>
+
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -50,17 +77,44 @@
         <footer class="footer">
             <section class="footer-grid">
                 <p>© 2026</p>
-                <p>DESIGNED & DEVELOPED BY OXA MARVEL</p>
+                <p>DESIGNED & DEVELOPED BY OXA</p>
             </section>
         </footer>
 
 
+        <!-- Grid Overlay -->
+        <script>
+            // Generate grid columns dynamically
+            const gridOverlay = document.getElementById('gridOverlay');
+            const columns = getComputedStyle(document.documentElement)
+                .getPropertyValue('--grid-columns')
+                .trim();
+            
+            // Create column divs
+            for (let i = 0; i < parseInt(columns); i++) {
+                const column = document.createElement('div');
+                column.className = 'grid-column';
+                gridOverlay.appendChild(column);
+            }
+
+            // Toggle grid visibility
+            function toggleGrid() {
+                const body = document.body;
+                body.classList.toggle('debug');
+                
+                const gridOverlay = document.getElementById('gridOverlay');
+                const currentOpacity = window.getComputedStyle(gridOverlay).opacity;
+                gridOverlay.style.opacity = currentOpacity === '0.3' ? '0.7' : '0.3';
+            }
+        </script>
+
 
         <!-- Copy Email Script-->
         <script>
-            const emailElement = document.querySelector('.copy-email');
+            const emailCard = document.querySelector('.email-card');
 
-            emailElement.addEventListener('click', () => {
+            emailCard.addEventListener('click', () => {
+                const emailElement = emailCard.querySelector('.copy-email');
                 const email = emailElement.dataset.email;
 
                 navigator.clipboard.writeText(email).then(() => {
@@ -72,5 +126,7 @@
                 });
             });
         </script>
+
+        
     </body>
 </html>
