@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Oxa Marvel — Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+
+
+
+    <body>
+
+        <div class="grid-overlay" id="gridOverlay"></div>
+
+        
+        <header class="header">
+            <nav class="header-grid">
+                
+                <div class="nav-brand">
+                    <a href="index.html" class="nav-link">OXA MARVEL</a>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="info.html" class="nav-link">INFO</a>
+                </div>
+
+                <div class="grid-spacer"></div>
+
+                <div class="nav-links">
+                    <a href="archive.html" class="nav-link">ARCHIVE</a>
+                </div>
+
+                <div class="grid-spacer"></div>
+            </nav>
+        </header>
+
+
+        <main class="main">
+
+            <div class="project">
+
+                <section class="project-desc">
+                    <h1>Project Title</h1>
+
+                    <p>This is a sample project documentation showcasing the design process, concepts, and final deliverables. Inspired by Behance-style presentations, this page demonstrates how to effectively communicate project work through visual storytelling.</p>
+                    <p>Explore the journey from initial concepts to polished execution, with detailed breakdowns of design decisions and technical implementations.</p>
+                </section>
+
+                <section class="project-documentation">
+                    
+                    <div class="doc-section">
+                        <h2>Concept Development</h2>
+                        <img src="images/concept1.jpg" alt="Initial concept sketches">
+                        <p>The project began with extensive research and brainstorming sessions. We explored various design directions, focusing on user experience and visual hierarchy. The initial concepts were sketched digitally, allowing for quick iterations and feedback.</p>
+                        <p>Key considerations included accessibility, responsive design, and maintaining brand consistency across different platforms.</p>
+                    </div>
+
+                    <div class="doc-section">
+                        <h2>Wireframing & Prototyping</h2>
+                        <img src="images/wireframe.jpg" alt="Wireframe layouts">
+                        <p>Low-fidelity wireframes were created to establish the basic structure and information architecture. These wireframes served as a blueprint for the user interface, ensuring all essential elements were accounted for.</p>
+                        <p>Interactive prototypes were then developed using modern web technologies, allowing stakeholders to experience the flow and functionality before final development.</p>
+                    </div>
+
+                    <div class="doc-section">
+                        <h2>Visual Design</h2>
+                        <img src="images/visual-design.jpg" alt="Final visual design">
+                        <p>The visual design phase brought the wireframes to life with color, typography, and imagery. We developed a cohesive design system that included custom icons, illustrations, and a carefully selected color palette.</p>
+                        <p>Typography choices were made to ensure readability across devices, while the overall aesthetic aligned with the project's goals and target audience.</p>
+                    </div>
+
+                    <div class="doc-section">
+                        <h2>Final Implementation</h2>
+                        <img src="images/final-implementation.jpg" alt="Live project screenshot">
+                        <p>The final implementation combined all elements into a fully functional product. Clean, efficient code ensures optimal performance, while the design maintains its integrity across different screen sizes and devices.</p>
+                        <p>This project demonstrates the power of thoughtful design and technical execution in creating meaningful digital experiences.</p>
+                    </div>
+
+                </section>
+
+            </div>
+        </main>
+
+
+        <!-- Grid Overlay -->
+        <script>
+            // Generate grid columns dynamically
+            const gridOverlay = document.getElementById('gridOverlay');
+            const columns = getComputedStyle(document.documentElement)
+                .getPropertyValue('--grid-columns')
+                .trim();
+            
+            // Create column divs
+            for (let i = 0; i < parseInt(columns); i++) {
+                const column = document.createElement('div');
+                column.className = 'grid-column';
+                gridOverlay.appendChild(column);
+            }
+
+            // Toggle grid visibility
+            function toggleGrid() {
+                const body = document.body;
+                body.classList.toggle('debug');
+                
+                const gridOverlay = document.getElementById('gridOverlay');
+                const currentOpacity = window.getComputedStyle(gridOverlay).opacity;
+                gridOverlay.style.opacity = currentOpacity === '0.3' ? '0.7' : '0.3';
+            }
+        </script>
+
+        
+    </body>
+</html>
