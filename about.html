@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="nav-links">
-                    <a href="archive.html" class="nav-link">ARCHIVE</a>
+                    <a href="#" class="nav-link">ARCHIVE</a>
                 </div>
             </nav>
         </header>
@@ -40,27 +40,25 @@
             <div class="about-section">
 
                 <section class="bio-column">
-                    <h1>INFO</h1>
+                    
+                    <h1>ABOUT ME</h1>
 
-                    <p>Background in product design, game prototyping, and interactive systems, with experience across apps and game development. Works at the intersection of art, tools, and gameplay to build scalable and expressive visual systems.</p>
-                    <p>To continue innovating at the intersection of art, technology, and user experience, creating meaningful and impactful interactive systems.</p>
+                    <div class="bio-intro">
+                        <p>Background in product design, game prototyping, and interactive systems, with experience across apps and game development. Works at the intersection of art, tools, and gameplay to build scalable and expressive visual systems.</p>
+                        <p>To continue innovating at the intersection of art, technology, and user experience, creating meaningful and impactful interactive systems.</p>
+                    </div>
                 </section>
 
                 <section class="profile-column">
 
-                    <img src="ku-1600x1000.jpg" alt="Oxa Marvel" class="profile-pic">
+                    <img src="assets/photo_for_id.jpg" alt="Oxa Marvel" class="profile-pic">
 
                     <div class="contact-grid">
                         
                         <div class="contact-card">
-                            <div class="contact-title">Email</div>
-                            <div class="contact-notes">oxamarvel@gmail.com</div>
-                        </div>
-
-                        <div class="contact-card">
-                            <a href="https://github.com/oxamarvel" target="_blank" class="contact-link">
-                                <div class="contact-title">GitHub</div>
-                                <div class="contact-notes">/oxamarvel</div>
+                            <a href="#" class="contact-link">
+                                <div class="contact-title">Email</div>
+                                <div class="contact-notes">oxamarvel@gmail.com</div>
                             </a>
                         </div>
 
@@ -72,9 +70,16 @@
                         </div>
 
                         <div class="contact-card">
-                            <a href="https://behance.net/oxamarvel" target="_blank" class="contact-link">
-                                <div class="contact-title">Behance</div>
+                            <a href="https://github.com/oxamarvel" target="_blank" class="contact-link">
+                                <div class="contact-title">GitHub</div>
                                 <div class="contact-notes">/oxamarvel</div>
+                            </a>
+                        </div>
+
+                        <div class="contact-card">
+                            <a href="https://instagram.com/mirabilia.studio" target="_blank" class="contact-link">
+                                <div class="contact-title">Instagram</div>
+                                <div class="contact-notes">/mirabilia.studio</div>
                             </a>
                         </div>
                     </div>
@@ -112,17 +117,17 @@
 
         <!-- Copy Email Script-->
         <script>
-            const emailCard = document.querySelector('.email-card');
+            const emailCard = document.querySelector('.contact-card');
 
             emailCard.addEventListener('click', () => {
-                const emailElement = emailCard.querySelector('.copy-email');
-                const email = emailElement.dataset.email;
+                const notesElement = emailCard.querySelector('.contact-notes');
+                const email = 'oxamarvel@gmail.com';
 
                 navigator.clipboard.writeText(email).then(() => {
-                    emailElement.textContent = 'Email Copied!';
+                    notesElement.textContent = 'Email copied!';
 
                     setTimeout(() => {
-                        emailElement.textContent = email;
+                        notesElement.textContent = email;
                     }, 2000);
                 });
             });
