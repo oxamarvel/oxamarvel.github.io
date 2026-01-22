@@ -80,7 +80,7 @@
                     </section>
 
                     <section class="doc-section">
-                        <h2>Project Intent & Inspiration</h2>
+                        <h2>Identity Constructed</h2>
 
                         <figure>
                             <img src="assets/start.png" alt="Blockout mesh" />
@@ -88,105 +88,95 @@
 
                         <div class="doc-desc">
                             <p>
-                                Sand Drift is a personal 3D project exploring cinematic vehicle motion in a vast desert environment.
+                                A personal 3D introduction project where my name, OXA, is constructed inside an industrial, bunker-like environment.
                             </p>
                             <p>
-                                The goal was to recreate the visual language of automotive advertisements—emphasizing scale, power,
-                                and controlled chaos through dust, motion, and lighting.
-                            </p>
-                        </div>
-                    </section>
-
-                    <section class="doc-section">
-                        <h2>Procedural Dune Landscape</h2>
-
-                        <figure>
-                            <img src="assets/mountain_geometry.png" alt="Blockout mesh" />
-                        </figure>
-
-                        <div class="doc-desc">
-                            <p>
-                                The dune environment was built using procedural geometry,
-                                implementing noise-based height variation to form large-scale mountain ranges.
-                            </p>
-                            <p>
-                                This non-destructive approach allowed rapid iteration and flexible scale
-                                adjustments while maintaining natural variation and believable erosion patterns.
+                                Each letter assembled in a distinct system, allowing me to showcase different technical and artistic approaches in a single cohesive scene.
                             </p>
                         </div>
                     </section>
 
                     <section class="doc-section">
-                        <h2>Procedural Sandstone Shading</h2>
+                        <h2>Industrial Infrastructure</h2>
 
                         <figure>
-                            <img src="assets/sanstone_shader.png" alt="Blockout mesh" />
+                            <img src="assets/industrial.png" alt="Blockout mesh" />
                         </figure>
 
                         <div class="doc-desc">
                             <p>
-                                All terrain materials, including sandstone mountains and sand surfaces,
-                                were created using procedural shaders.
+                                Materials are created procedurally using shader nodes to ensure flexibility and consistency across the environment.
                             </p>
                             <p>
-                                Layered noise and displacement
-                                were used to avoid image textures, ensuring consistency across scale
-                                while preserving natural surface variation.
+                                Concrete surfaces feature roughness variation and cracking, while pipes use layered shaders to blend peeled paint and rust, suggesting long-term use, exposure, and structural aging.
                             </p>
                         </div>
                     </section>
 
                     <section class="doc-section">
-                        <h2>Volumetric Dust</h2>
+                        <h2>Atmosphere & Lightning</h2>
 
                         <figure>
-                            <img src="assets/volumetric_dust.png" alt="Blockout mesh" />
+                            <img src="assets/volumetric dust.png" alt="Blockout mesh" />
                         </figure>
 
                         <div class="doc-desc">
                             <p>
-                                To enhance atmospheric ambience, volumetric dust was introduced
-                                to simulate wind-blown sand commonly found in desert environments.
+                                Volumetric dust fills the space to enhance depth and scale, reinforcing the heavy, enclosed atmosphere of an underground facility.
                             </p>
                             <p>
-                                Density and movement were driven by noise and directional controls,
-                                carefully tuned to avoid overpowering the vehicle’s silhouette.
+                                Lighting is integrated directly into the environment using cylindrical mesh lamps with emission shaders, creating controlled and artificial illumination typical of industrial spaces.
                             </p>
                         </div>
                     </section>
 
                     <section class="doc-section">
-                        <h2>Subdivision Modeling & Motion Through Physics</h2>
+                        <h2>O — Physics & Momentum</h2>
 
                         <figure>
-                            <img src="assets/geometry_nodes.png" alt="Blockout mesh" />
+                            <img src="assets/letter o.png" alt="Blockout mesh" />
                         </figure>
 
                         <div class="doc-desc">
                             <p>
-                                The vehicle was inspired by off-road car designs and modeled in Blender using subdivision techniques.
+                                The letter O is treated as a heavy circular object and animated using rigid body simulation. Its motion is driven by gravity and mass as it rolls down a ramp, emphasizing inertia and weight.
                             </p>
                             <p>
-                                Instead of manual keyframing, vehicle motion was driven using rigid body simulation
-                                to achieve natural weight transfer and responsive suspension behavior.
+                                A simple guiding plane secures the rolling path and prevents unwanted toppling, preserving stable yet natural physical behavior.
                             </p>
                         </div>
                     </section>
 
                     <section class="doc-section">
-                        <h2>Lighting & Camera Direction</h2>
+                        <h2>X — Controlled Motion</h2>
 
                         <figure>
-                            <img src="assets/geometry_nodes.png" alt="Blockout mesh" />
+                            <img src="assets/letter x.png" alt="Blockout mesh" />
                         </figure>
 
                         <div class="doc-desc">
                             <p>
-                                Natural lighting was introduced to establish a realistic desert mood and strong form definition.
+                                The letter X rises vertically from a bottom hatch using keyframed translation with eased timing. Unlike the physically driven motion of the O, this movement is fully controlled, representing a deliberate system activation.
                             </p>
                             <p>
-                                Camera direction was designed to follow automotive advertisement conventions,
-                                using multiple angles, longer lenses, and controlled highlights to emphasize motion and silhouette.
+                                The restrained motion emphasizes precision and introduces contrast between simulation-based behavior and mechanically programmed movement.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="doc-section">
+                        <h2>A — Mechanical Interaction</h2>
+
+                        <figure>
+                            <img src="assets/letter a.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc">
+                            <p>
+                                The letter A is assembled and positioned by a robotic mechanism designed to feel functional and mechanically believable. 
+                            </p>
+                            <p>
+                                The robot arm is driven by an inverse-kinematics rig, allowing coordinated motion. The gripping hand uses rigid body simulation to physically interact with the letter, while piston movement is regulated using damped track constraints.
                             </p>
                         </div>
                     </section>
@@ -198,19 +188,19 @@
                             <img src="assets/end.png" alt="Blockout mesh" />
                         </figure>
 
-                        <div class="doc-desc">
+                        <div class="doc-desc-list">
                             <div class="doc-list">
                                 <p>Key Learnings</p>
                                 <ul>
-                                    <li>Procedural workflows significantly improve iteration speed and flexibility.</li>
-                                    <li>Physics-based motion adds subtle realism that is difficult to achieve through manual animation.</li>
+                                    <li>Rigid body stability improves with guiding geometry and controlled system handoffs.</li>
+                                    <li>IK rigs combined with damped constraints help achieve believable mechanical behavior.</li>
                                 </ul>
                             </div>
                             <div class="doc-list">
                                 <p>Future Improvements</p>
                                 <ul>
-                                    <li>Add texture painting and advanced shading to introduce wear, dust, scratches, and surface detail.</li>
-                                    <li>Implement a particle-based dust trail system for stronger wheel–terrain interaction.</li>
+                                    <li>Introduce more secondary motion (vibration, recoil, settling) to enhance perceived mechanical weight.</li>
+                                    <li>Expand environmental detail with additional props and clutter to increase immersion.</li>
                                 </ul>
                             </div>
                         </div>

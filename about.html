@@ -21,16 +21,17 @@
             <nav class="header-grid">
                 
                 <div class="nav-brand">
-                    <a href="index.html" class="nav-link">OXA MARVEL</a>
+                    <a href="index.html">OXA MARVEL</a>
                 </div>
                 
                 <div class="nav-links">
-                    <a href="about.html" class="nav-link">ABOUT ME</a>
+                    <a href="about.html">ABOUT ME</a>
                 </div>
 
                 <div class="nav-links">
-                    <a href="#" class="nav-link">ARCHIVE</a>
+                    <a href="#">ARCHIVE</a>
                 </div>
+
             </nav>
         </header>
 
@@ -40,7 +41,6 @@
             <div class="about-section">
 
                 <section class="bio-column">
-                    
                     <h1>ABOUT ME</h1>
 
                     <div class="bio-intro">
@@ -58,28 +58,28 @@
                         <div class="contact-card">
                             <div class="contact-link email-link">
                                 <div class="contact-title">Email</div>
-                                <div class="contact-notes">oxamarvel@gmail.com</div>
+                                <div class="contact-notes">OXAMARVEL@GMAIL.COM</div>
                             </div>
                         </div>
 
                         <div class="contact-card">
                             <a href="https://linkedin.com/in/oxamarvel" target="_blank" class="contact-link">
                                 <div class="contact-title">LinkedIn</div>
-                                <div class="contact-notes">/in/oxamarvel</div>
+                                <div class="contact-notes">/IN/OXAMARVEL</div>
                             </a>
                         </div>
 
                         <div class="contact-card">
                             <a href="https://github.com/oxamarvel" target="_blank" class="contact-link">
                                 <div class="contact-title">GitHub</div>
-                                <div class="contact-notes">/oxamarvel</div>
+                                <div class="contact-notes">/OXAMARVEL</div>
                             </a>
                         </div>
 
                         <div class="contact-card">
                             <a href="https://instagram.com/mirabilia.studio" target="_blank" class="contact-link">
                                 <div class="contact-title">Instagram</div>
-                                <div class="contact-notes">/mirabilia.studio</div>
+                                <div class="contact-notes">/MIRABILIA.STUDIO</div>
                             </a>
                         </div>
                     </div>
@@ -114,25 +114,39 @@
             }
         </script>
 
-
-        <!-- Copy Email Script-->
+        <!-- Contact Notes Script-->
         <script>
-            const emailCard = document.querySelector('.contact-card');
+            const contactLinks = document.querySelectorAll('.contact-link');
 
-            emailCard.addEventListener('click', () => {
-                const notesElement = emailCard.querySelector('.contact-notes');
-                const email = 'oxamarvel@gmail.com';
+            contactLinks.forEach(link => {
+                const notesElement = link.querySelector('.contact-notes');
+                const originalText = notesElement.textContent;
 
-                navigator.clipboard.writeText(email).then(() => {
-                    notesElement.textContent = 'Email copied!';
-
-                    setTimeout(() => {
-                        notesElement.textContent = email;
-                    }, 2000);
+                link.addEventListener('mouseenter', () => {
+                    if (link.classList.contains('email-link')) {
+                        notesElement.textContent = 'COPY EMAIL ADDRESS';
+                    } else {
+                        notesElement.textContent = 'VISIT PROFILE';
+                    }
                 });
+
+                link.addEventListener('mouseleave', () => {
+                    notesElement.textContent = originalText;
+                });
+
+                if (link.classList.contains('email-link')) {
+                    link.addEventListener('click', () => {
+                        const email = 'oxamarvel@gmail.com';
+                        navigator.clipboard.writeText(email).then(() => {
+                            notesElement.textContent = 'EMAIL COPIED';
+                            setTimeout(() => {
+                                notesElement.textContent = originalText;
+                            }, 3000);
+                        });
+                    });
+                }
             });
         </script>
 
-        
     </body>
 </html>

@@ -21,15 +21,15 @@
             <nav class="header-grid">
                 
                 <div class="nav-brand">
-                    <a href="index.html" class="nav-link">OXA MARVEL</a>
+                    <a href="index.html">OXA MARVEL</a>
                 </div>
                 
                 <div class="nav-links">
-                    <a href="about.html" class="nav-link">ABOUT ME</a>
+                    <a href="about.html">ABOUT ME</a>
                 </div>
 
                 <div class="nav-links">
-                    <a href="#" class="nav-link">ARCHIVE</a>
+                    <a href="#">ARCHIVE</a>
                 </div>
 
             </nav>
@@ -37,6 +37,7 @@
 
 
         <main class="main">
+            
             <section class="hero-section">
                 <h1 class="hero-name">
                     OXA MARVEL<br>
@@ -44,52 +45,45 @@
                 </h1>
 
                 <aside class="hero-info">
-                    <h2 class="hero-desc">
-                        <span id="typing-text"></span>
-                    </h2>
-
-                    <h2 class="hero-desc">
-                        from Indonesia
-                    </h2>
+                    <span id="typing-text"></span>
+                    <p>from Indonesia</p>
                 </aside>
             </section>
 
             <section class="projects-section">
-                <div class="projects">
 
-                    <a href="projects/sand_drift/sand_drift.html" class="project-card">
-                        <img src="assets/sanddrift.png" alt="Project 1" class="project-img">
-                        <div class="project-card-info">
-                            <span>01</span>
-                            <span>SAND DRIFT</span>
-                        </div>
-                    </a>
+                <a href="projects/sand_drift/sand_drift.html" class="project-card">
+                    <img src="assets/sanddrift.png" alt="Project 1" class="project-img">
+                    <div class="project-card-info">
+                        <span>01</span>
+                        <span>SAND DRIFT</span>
+                    </div>
+                </a>
 
-                    <a href="projects/oxa_constructed/oxa_constructed.html" class="project-card">
-                        <img src="assets/oxa.png" alt="Project 2" class="project-img">
-                        <div class="project-card-info">
-                            <span>02</span>
-                            <span>OXA: CONSTRUCTED</span>
-                        </div>
-                    </a>
+                <a href="projects/oxa_constructed/oxa_constructed.html" class="project-card">
+                    <img src="assets/oxa.png" alt="Project 2" class="project-img">
+                    <div class="project-card-info">
+                        <span>02</span>
+                        <span>OXA: CONSTRUCTED</span>
+                    </div>
+                </a>
 
-                    <a href="projects/score_up/score_up.html" class="project-card">
-                        <img src="assets/scoreup.png" alt="Project 3" class="project-img">
-                        <div class="project-card-info">
-                            <span>03</span>
-                            <span>SCORE UP!</span>
-                        </div>
-                    </a>
+                <a href="projects/score_up/score_up.html" class="project-card">
+                    <img src="assets/scoreup.png" alt="Project 3" class="project-img">
+                    <div class="project-card-info">
+                        <span>03</span>
+                        <span>SCORE UP!</span>
+                    </div>
+                </a>
 
-                    <a href="projects/chandra_sekhar/chandra_sekhar.html" class="project-card">
-                        <img src="assets/chandrasekhar.png" alt="Project 4" class="project-img">
-                        <div class="project-card-info">
-                            <span>04</span>
-                            <span>CHANDRA SEKHAR</span>
-                        </div>
-                    </a>
+                <a href="projects/chandra_sekhar/chandra_sekhar.html" class="project-card">
+                    <img src="assets/chandrasekhar.png" alt="Project 4" class="project-img">
+                    <div class="project-card-info">
+                        <span>04</span>
+                        <span>CHANDRA SEKHAR</span>
+                    </div>
+                </a>
 
-                </div>
             </section>
         </main>
 
@@ -118,7 +112,6 @@
                 gridOverlay.appendChild(column);
             }
         </script>
-
 
         <!-- Typing Text Script -->
         <script>
@@ -156,6 +149,26 @@
             typeLoop();
         </script>
 
+        <!-- Project Hover Script -->
+        <script>
+            const projectCards = document.querySelectorAll('.project-card');
+
+            projectCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    projectCards.forEach(otherCard => {
+                        if (otherCard !== card) {
+                            otherCard.classList.add('blurred');
+                        }
+                    });
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    projectCards.forEach(otherCard => {
+                        otherCard.classList.remove('blurred');
+                    });
+                });
+            });
+        </script>
 
     </body>
 </html>
