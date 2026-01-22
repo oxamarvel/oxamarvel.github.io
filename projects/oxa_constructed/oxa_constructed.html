@@ -71,33 +71,150 @@
 
                 <section class="project-docs">
 
-                    <div class="doc-section">
-                        <h2>Concept Development</h2>
-                        <img src="images/concept1.jpg" alt="Initial concept sketches">
-                        <p>The project began with extensive research and brainstorming sessions. We explored various design directions, focusing on user experience and visual hierarchy. The initial concepts were sketched digitally, allowing for quick iterations and feedback.</p>
-                        <p>Key considerations included accessibility, responsive design, and maintaining brand consistency across different platforms.</p>
-                    </div>
+                    <section class="doc-section">
+                        <figure>
+                            <video controls muted loop>
+                                <source src="assets/oxa_constructed.mp4" type="video/mp4">
+                            </video>
+                        </figure>
+                    </section>
 
-                    <div class="doc-section">
-                        <h2>Wireframing & Prototyping</h2>
-                        <img src="images/wireframe.jpg" alt="Wireframe layouts">
-                        <p>Low-fidelity wireframes were created to establish the basic structure and information architecture. These wireframes served as a blueprint for the user interface, ensuring all essential elements were accounted for.</p>
-                        <p>Interactive prototypes were then developed using modern web technologies, allowing stakeholders to experience the flow and functionality before final development.</p>
-                    </div>
+                    <section class="doc-section">
+                        <h2>Project Intent & Inspiration</h2>
 
-                    <div class="doc-section">
-                        <h2>Visual Design</h2>
-                        <img src="images/visual-design.jpg" alt="Final visual design">
-                        <p>The visual design phase brought the wireframes to life with color, typography, and imagery. We developed a cohesive design system that included custom icons, illustrations, and a carefully selected color palette.</p>
-                        <p>Typography choices were made to ensure readability across devices, while the overall aesthetic aligned with the project's goals and target audience.</p>
-                    </div>
+                        <figure>
+                            <img src="assets/start.png" alt="Blockout mesh" />
+                        </figure>
 
-                    <div class="doc-section">
-                        <h2>Final Implementation</h2>
-                        <img src="images/final-implementation.jpg" alt="Live project screenshot">
-                        <p>The final implementation combined all elements into a fully functional product. Clean, efficient code ensures optimal performance, while the design maintains its integrity across different screen sizes and devices.</p>
-                        <p>This project demonstrates the power of thoughtful design and technical execution in creating meaningful digital experiences.</p>
-                    </div>
+                        <div class="doc-desc">
+                            <p>
+                                Sand Drift is a personal 3D project exploring cinematic vehicle motion in a vast desert environment.
+                            </p>
+                            <p>
+                                The goal was to recreate the visual language of automotive advertisements—emphasizing scale, power,
+                                and controlled chaos through dust, motion, and lighting.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="doc-section">
+                        <h2>Procedural Dune Landscape</h2>
+
+                        <figure>
+                            <img src="assets/mountain_geometry.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc">
+                            <p>
+                                The dune environment was built using procedural geometry,
+                                implementing noise-based height variation to form large-scale mountain ranges.
+                            </p>
+                            <p>
+                                This non-destructive approach allowed rapid iteration and flexible scale
+                                adjustments while maintaining natural variation and believable erosion patterns.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="doc-section">
+                        <h2>Procedural Sandstone Shading</h2>
+
+                        <figure>
+                            <img src="assets/sanstone_shader.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc">
+                            <p>
+                                All terrain materials, including sandstone mountains and sand surfaces,
+                                were created using procedural shaders.
+                            </p>
+                            <p>
+                                Layered noise and displacement
+                                were used to avoid image textures, ensuring consistency across scale
+                                while preserving natural surface variation.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="doc-section">
+                        <h2>Volumetric Dust</h2>
+
+                        <figure>
+                            <img src="assets/volumetric_dust.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc">
+                            <p>
+                                To enhance atmospheric ambience, volumetric dust was introduced
+                                to simulate wind-blown sand commonly found in desert environments.
+                            </p>
+                            <p>
+                                Density and movement were driven by noise and directional controls,
+                                carefully tuned to avoid overpowering the vehicle’s silhouette.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="doc-section">
+                        <h2>Subdivision Modeling & Motion Through Physics</h2>
+
+                        <figure>
+                            <img src="assets/geometry_nodes.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc">
+                            <p>
+                                The vehicle was inspired by off-road car designs and modeled in Blender using subdivision techniques.
+                            </p>
+                            <p>
+                                Instead of manual keyframing, vehicle motion was driven using rigid body simulation
+                                to achieve natural weight transfer and responsive suspension behavior.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="doc-section">
+                        <h2>Lighting & Camera Direction</h2>
+
+                        <figure>
+                            <img src="assets/geometry_nodes.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc">
+                            <p>
+                                Natural lighting was introduced to establish a realistic desert mood and strong form definition.
+                            </p>
+                            <p>
+                                Camera direction was designed to follow automotive advertisement conventions,
+                                using multiple angles, longer lenses, and controlled highlights to emphasize motion and silhouette.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="doc-section">
+                        <h2>Reflection & Learnings</h2>
+
+                        <figure>
+                            <img src="assets/end.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc">
+                            <div class="doc-list">
+                                <p>Key Learnings</p>
+                                <ul>
+                                    <li>Procedural workflows significantly improve iteration speed and flexibility.</li>
+                                    <li>Physics-based motion adds subtle realism that is difficult to achieve through manual animation.</li>
+                                </ul>
+                            </div>
+                            <div class="doc-list">
+                                <p>Future Improvements</p>
+                                <ul>
+                                    <li>Add texture painting and advanced shading to introduce wear, dust, scratches, and surface detail.</li>
+                                    <li>Implement a particle-based dust trail system for stronger wheel–terrain interaction.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
 
                 </section>
 
