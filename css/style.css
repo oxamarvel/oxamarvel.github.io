@@ -242,7 +242,7 @@ body {
 }
 
 .bio-column {
-	grid-column: span 6;
+	grid-column: span 5;
 	height: 83vh;
 	padding-bottom: 2vh;
 
@@ -281,7 +281,7 @@ body {
 .contact-grid {
 	display: grid;
     grid-template-columns: repeat(4, 1fr);
-	gap: var(--gutter-width);
+	column-gap: var(--gutter-width);
     align-items: start;
 }
 
