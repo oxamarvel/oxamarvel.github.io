@@ -65,6 +65,7 @@
                 
                 <section class="project-docs">
 
+                    
                     <section class="doc-section">
                         <figure>
                             <video controls muted loop>
@@ -73,6 +74,7 @@
                         </figure>
                     </section>
 
+
                     <section class="doc-section">
                         <h2>Project Intent & Inspiration</h2>
 
@@ -80,16 +82,15 @@
                             <img src="assets/start.png" alt="Blockout mesh" />
                         </figure>
 
-                        <div class="doc-desc">
-                            <p>
-                                Sand Drift is a personal 3D project exploring cinematic vehicle motion in a vast desert environment.
-                            </p>
-                            <p>
-                                The goal was to recreate the visual language of automotive advertisements—emphasizing scale, power,
-                                and controlled chaos through dust, motion, and lighting.
-                            </p>
+
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>Sand Drift is a personal 3D project exploring cinematic vehicle motion in a vast desert environment.</p>
+                                <p>The goal was to recreate the visual language of automotive advertisements—emphasizing scale, power, and controlled chaos through dust, motion, and lighting.</p>
+                            </div>
                         </div>
                     </section>
+
 
                     <section class="doc-section">
                         <h2>Procedural Dune Landscape</h2>
@@ -98,15 +99,11 @@
                             <img src="assets/mountain_geometry.png" alt="Blockout mesh" />
                         </figure>
 
-                        <div class="doc-desc">
-                            <p>
-                                The dune environment was built using procedural geometry,
-                                implementing noise-based height variation to form large-scale mountain ranges.
-                            </p>
-                            <p>
-                                This non-destructive approach allowed rapid iteration and flexible scale
-                                adjustments while maintaining natural variation and believable erosion patterns.
-                            </p>
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>The dune environment was built using procedural geometry, implementing noise-based height variation to form large-scale mountain ranges.</p>
+                                <p>This non-destructive approach allowed rapid iteration and flexible scale adjustments while maintaining natural variation and believable erosion patterns.</p>
+                            </div>
                         </div>
                     </section>
 
@@ -117,16 +114,11 @@
                             <img src="assets/sanstone_shader.png" alt="Blockout mesh" />
                         </figure>
 
-                        <div class="doc-desc">
-                            <p>
-                                All terrain materials, including sandstone mountains and sand surfaces,
-                                were created using procedural shaders.
-                            </p>
-                            <p>
-                                Layered noise and displacement
-                                were used to avoid image textures, ensuring consistency across scale
-                                while preserving natural surface variation.
-                            </p>
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>All terrain materials, including sandstone mountains and sand surfaces, were created using procedural shaders.</p>
+                                <p>Layered noise and displacement were used to avoid image textures, ensuring consistency across scale while preserving natural surface variation.</p>
+                            </div>
                         </div>
                     </section>
 
@@ -137,16 +129,13 @@
                             <img src="assets/volumetric_dust.png" alt="Blockout mesh" />
                         </figure>
 
-                        <div class="doc-desc">
-                            <p>
-                                To enhance atmospheric ambience, volumetric dust was introduced
-                                to simulate wind-blown sand commonly found in desert environments.
-                            </p>
-                            <p>
-                                Density and movement were driven by noise and directional controls,
-                                carefully tuned to avoid overpowering the vehicle’s silhouette.
-                            </p>
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>To enhance atmospheric ambience, volumetric dust was introduced to simulate wind-blown sand commonly found in desert environments.</p>
+                                <p>Density and movement were driven by noise and directional controls, carefully tuned to avoid overpowering the vehicle’s silhouette.</p>
+                            </div>
                         </div>
+
                     </section>
 
                     <section class="doc-section">
@@ -156,23 +145,22 @@
                             <img src="assets/car_subdivision.png" alt="Blockout mesh" />
                         </figure>
 
-                        <div class="doc-desc">
-                            <p>
-                                The vehicle was inspired by off-road car designs and modeled in Blender using subdivision techniques.
-                            </p>
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>The vehicle was inspired by off-road car designs and modeled in Blender using subdivision techniques.</p>
+                            </div>
                         </div>
 
-                        <figure>
+
+                        <figure style="margin-top: 3.7rem;">
                             <img src="assets/car_physics.png" alt="Blockout mesh" />
                         </figure>
 
-                        <div class="doc-desc">
-                            <p>
-                                Instead of manual keyframing, vehicle motion was driven using rigid body simulation
-                                to achieve natural weight transfer and responsive suspension behavior.
-                            </p>
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>Instead of manual keyframing, vehicle motion was driven using rigid body simulation to achieve natural weight transfer and responsive suspension behavior.</p>
+                            </div>
                         </div>
-
                     </section>
 
                     <section class="doc-section">
@@ -182,40 +170,41 @@
                             <img src="assets/camera.png" alt="Blockout mesh" />
                         </figure>
 
-                        <div class="doc-desc">
-                            <p>
-                                Natural lighting was introduced to establish a realistic desert mood and strong form definition.
-                            </p>
-                            <p>
-                                Camera direction was designed to follow automotive advertisement conventions,
-                                using multiple angles, longer lenses, and controlled highlights to emphasize motion and silhouette.
-                            </p>
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>Natural lighting was introduced to establish a realistic desert mood and strong form definition.</p>
+                                <p>Camera direction was designed to follow automotive advertisement conventions, using multiple angles, longer lenses, and controlled highlights to emphasize motion and silhouette.</p>
+                            </div>
                         </div>
+
                     </section>
 
-                    <section class="doc-section">
+                    <section class="doc-section" style="margin-bottom: 8dvh;">
                         <h2>Reflection & Learnings</h2>
 
                         <figure>
                             <img src="assets/end.png" alt="Blockout mesh" />
                         </figure>
 
-                        <div class="doc-desc-list">
-                            <div class="doc-list">
-                                <p>Key Learnings</p>
-                                <ul>
-                                    <li>Procedural workflows significantly improve iteration speed and flexibility.</li>
-                                    <li>Physics-based motion adds subtle realism that is difficult to achieve through manual animation.</li>
-                                </ul>
-                            </div>
-                            <div class="doc-list">
-                                <p>Future Improvements</p>
-                                <ul>
-                                    <li>Add texture painting and advanced shading to introduce wear, dust, scratches, and surface detail.</li>
-                                    <li>Implement a particle-based dust trail system for stronger wheel–terrain interaction.</li>
-                                </ul>
+                        <div class="doc-desc-section" >
+                            <div class="doc-desc-list">
+                                <div class="doc-list">
+                                    <p>Key Learnings</p>
+                                    <ul>
+                                        <li>Procedural workflows significantly improve iteration speed and flexibility.</li>
+                                        <li>Physics-based motion adds subtle realism that is difficult to achieve through manual animation.</li>
+                                    </ul>
+                                </div>
+                                <div class="doc-list">
+                                    <p>Future Improvements</p>
+                                    <ul>
+                                        <li>Add texture painting and advanced shading to introduce wear, dust, scratches, and surface detail.</li>
+                                        <li>Implement a particle-based dust trail system for stronger wheel–terrain interaction.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
+
                     </section>
                 </section>
             </div>

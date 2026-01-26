@@ -80,14 +80,13 @@
                             <img src="assets/start.png" alt="Blockout mesh" />
                         </figure>
 
-                        <div class="doc-desc">
-                            <p>
-                                A personal 3D introduction project where my name, OXA, is constructed inside an industrial, bunker-like environment.
-                            </p>
-                            <p>
-                                Each letter assembled in a distinct system, allowing me to showcase different technical and artistic approaches in a single cohesive scene.
-                            </p>
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>A personal 3D introduction project where my name, OXA, is constructed inside an industrial, bunker-like environment.</p>
+                                <p>Each letter assembled in a distinct system, allowing me to showcase different technical and artistic approaches in a single cohesive scene.</p>
+                            </div>
                         </div>
+                        
                     </section>
 
                     <section class="doc-section">
@@ -97,14 +96,13 @@
                             <img src="assets/industrial.png" alt="Blockout mesh" />
                         </figure>
 
-                        <div class="doc-desc">
-                            <p>
-                                Materials are created procedurally using shader nodes to ensure flexibility and consistency across the environment.
-                            </p>
-                            <p>
-                                Concrete surfaces feature roughness variation and cracking, while pipes use layered shaders to blend peeled paint and rust, suggesting long-term use, exposure, and structural aging.
-                            </p>
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>Materials are created procedurally using shader nodes to ensure flexibility and consistency across the environment.</p>
+                                <p>Concrete surfaces feature roughness variation and cracking, while pipes use layered shaders to blend peeled paint and rust, suggesting long-term use, exposure, and structural aging.</p>
+                            </div>
                         </div>
+                        
                     </section>
 
                     <section class="doc-section">
@@ -114,14 +112,13 @@
                             <img src="assets/volumetric dust.png" alt="Blockout mesh" />
                         </figure>
 
-                        <div class="doc-desc">
-                            <p>
-                                Volumetric dust fills the space to enhance depth and scale, reinforcing the heavy, enclosed atmosphere of an underground facility.
-                            </p>
-                            <p>
-                                Lighting is integrated directly into the environment using cylindrical mesh lamps with emission shaders, creating controlled and artificial illumination typical of industrial spaces.
-                            </p>
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>Volumetric dust fills the space to enhance depth and scale, reinforcing the heavy, enclosed atmosphere of an underground facility.</p>
+                                <p>Lighting is integrated directly into the environment using cylindrical mesh lamps with emission shaders, creating controlled and artificial illumination typical of industrial spaces.</p>
+                            </div>
                         </div>
+                        
                     </section>
 
                     <section class="doc-section">
@@ -131,14 +128,13 @@
                             <img src="assets/letter o.png" alt="Blockout mesh" />
                         </figure>
 
-                        <div class="doc-desc">
-                            <p>
-                                The letter O is treated as a heavy circular object and animated using rigid body simulation. Its motion is driven by gravity and mass as it rolls down a ramp, emphasizing inertia and weight.
-                            </p>
-                            <p>
-                                A simple guiding plane secures the rolling path and prevents unwanted toppling, preserving stable yet natural physical behavior.
-                            </p>
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>The letter O is treated as a heavy circular object and animated using rigid body simulation. Its motion is driven by gravity and mass as it rolls down a ramp, emphasizing inertia and weight.</p>
+                                <p>A simple guiding plane secures the rolling path and prevents unwanted toppling, preserving stable yet natural physical behavior.</p>
+                            </div>
                         </div>
+                        
                     </section>
 
                     <section class="doc-section">
@@ -148,14 +144,13 @@
                             <img src="assets/letter x.png" alt="Blockout mesh" />
                         </figure>
 
-                        <div class="doc-desc">
-                            <p>
-                                The letter X rises vertically from a bottom hatch using keyframed translation with eased timing. Unlike the physically driven motion of the O, this movement is fully controlled, representing a deliberate system activation.
-                            </p>
-                            <p>
-                                The restrained motion emphasizes precision and introduces contrast between simulation-based behavior and mechanically programmed movement.
-                            </p>
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>The letter X rises vertically from a bottom hatch using keyframed translation with eased timing. Unlike the physically driven motion of the O, this movement is fully controlled, representing a deliberate system activation.</p>
+                                <p>The restrained motion emphasizes precision and introduces contrast between simulation-based behavior and mechanically programmed movement.</p>
+                            </div>
                         </div>
+                        
                     </section>
 
                     <section class="doc-section">
@@ -165,39 +160,41 @@
                             <img src="assets/letter a.png" alt="Blockout mesh" />
                         </figure>
 
-                        <div class="doc-desc">
-                            <p>
-                                The letter A is assembled and positioned by a robotic mechanism designed to feel functional and mechanically believable. 
-                            </p>
-                            <p>
-                                The robot arm is driven by an inverse-kinematics rig, allowing coordinated motion. The gripping hand uses rigid body simulation to physically interact with the letter, while piston movement is regulated using damped track constraints.
-                            </p>
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>The letter A is assembled and positioned by a robotic mechanism designed to feel functional and mechanically believable.</p>
+                                <p>The robot arm is driven by an inverse-kinematics rig, allowing coordinated motion. The gripping hand uses rigid body simulation to physically interact with the letter, while piston movement is regulated using damped track constraints.</p>
+                            </div>
                         </div>
+                        
                     </section>
 
-                    <section class="doc-section">
+                    <section class="doc-section" style="margin-bottom: 8dvh;">
                         <h2>Reflection & Learnings</h2>
 
                         <figure>
                             <img src="assets/end.png" alt="Blockout mesh" />
                         </figure>
 
-                        <div class="doc-desc-list">
-                            <div class="doc-list">
-                                <p>Key Learnings</p>
-                                <ul>
-                                    <li>Rigid body stability improves with guiding geometry and controlled system handoffs.</li>
-                                    <li>IK rigs combined with damped constraints help achieve believable mechanical behavior.</li>
-                                </ul>
-                            </div>
-                            <div class="doc-list">
-                                <p>Future Improvements</p>
-                                <ul>
-                                    <li>Introduce more secondary motion (vibration, recoil, settling) to enhance perceived mechanical weight.</li>
-                                    <li>Expand environmental detail with additional props and clutter to increase immersion.</li>
-                                </ul>
+                        <div class="doc-desc-section">
+                            <div class="doc-desc-list">
+                                <div class="doc-list">
+                                    <p>Key Learnings</p>
+                                    <ul>
+                                        <li>Rigid body stability improves with guiding geometry and controlled system handoffs.</li>
+                                        <li>IK rigs combined with damped constraints help achieve believable mechanical behavior.</li>
+                                    </ul>
+                                </div>
+                                <div class="doc-list">
+                                    <p>Future Improvements</p>
+                                    <ul>
+                                        <li>Introduce more secondary motion (vibration, recoil, settling) to enhance perceived mechanical weight.</li>
+                                        <li>Expand environmental detail with additional props and clutter to increase immersion.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
+                        
                     </section>
 
                 </section>

@@ -328,6 +328,7 @@ body {
 
 
 /* archive.html */
+
 /* archive.html */
 
 
@@ -422,7 +423,8 @@ body {
 }
 
 .doc-section {
-	margin-bottom: 20vh;
+	margin-bottom: 30dvh;
+	/* background: yellow; */
 }
 
 .doc-section h2 {
@@ -434,7 +436,7 @@ body {
 }
 
 .doc-section figure {
-	margin-bottom: 2rem;
+	margin-top: 1.9rem;
 }
 
 .doc-section img,
@@ -442,19 +444,36 @@ body {
   width: 100%;
   aspect-ratio: 16/9;
   border-radius: 10px;
+  object-fit: cover;
+}
+
+.doc-desc-section {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	column-gap: var(--gutter-width);
+	margin-top: 1.3rem;
+
+	align-items: start;
+	/* background: purple; */
 }
 
 .doc-desc {
+	grid-column: 3 / span 6;
+
 	display: grid;
-	gap: 1rem;
-	margin-left: calc(2 * (var(--column-width) + var(--gutter-width)));
-	margin-bottom: 3rem;
+	gap: 1.3rem;
+	/* background: green; */
+
+
 }
 
 .doc-desc-list {
+	grid-column: 3 / span 6;
+
 	display: grid;
-	gap: 2rem;
-	margin-left: calc(2 * (var(--column-width) + var(--gutter-width)));
+	gap: 1.9rem;
+	/* background: green; */
+
 }
 
 .doc-list {
@@ -462,12 +481,15 @@ body {
 	gap: 0.5rem;
 }
 
-.doc-section ul {
+.doc-list ul {
 	display: grid;
 	padding-left: 2vw;
 	gap: 0.5rem;
 }
 /* project.html */
+
+
+
 
 
 /* Responsive Design */
