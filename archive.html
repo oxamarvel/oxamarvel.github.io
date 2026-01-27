@@ -16,76 +16,72 @@
 
         <div class="grid-overlay" id="gridOverlay"></div>
 
-        
+        <section class="archive-title">
+            <h1>ARCHIVE</h1>
+            <p>SCROLL TO DISCOVER</p>
+        </section>
+
+
         <header class="header">
             <nav class="header-grid">
                 
                 <div class="nav-brand">
-                    <a href="index.html" class="nav-link">OXA MARVEL</a>
+                    <a href="index.html">OXA MARVEL</a>
                 </div>
                 
                 <div class="nav-links">
-                    <a href="about.html" class="nav-link">ABOUT ME</a>
+                    <a href="about.html">ABOUT ME</a>
                 </div>
 
                 <div class="nav-links">
-                    <a href="archive.html" class="nav-link">ARCHIVE</a>
+                    <a href="archive.html">ARCHIVE</a>
                 </div>
+
             </nav>
         </header>
 
 
         <main class="main">
-
-            <div class="about-section">
-
-                <section class="bio-column">
-                    <h1>INFO</h1>
-
-                    <p>Background in product design, game prototyping, and interactive systems, with experience across apps and game development. Works at the intersection of art, tools, and gameplay to build scalable and expressive visual systems.</p>
-                    <p>To continue innovating at the intersection of art, technology, and user experience, creating meaningful and impactful interactive systems.</p>
-                </section>
-
-                <section class="profile-column">
-
-                    <img src="ku-1600x1000.jpg" alt="Oxa Marvel" class="profile-pic">
-
-                    <div class="contact-grid">
-                        
-                        <div class="contact-card">
-                            <div class="contact-title">Email</div>
-                            <div class="contact-notes">oxamarvel@gmail.com</div>
-                        </div>
-
-                        <div class="contact-card">
-                            <a href="https://github.com/oxamarvel" target="_blank" class="contact-link">
-                                <div class="contact-title">GitHub</div>
-                                <div class="contact-notes">/oxamarvel</div>
-                            </a>
-                        </div>
-
-                        <div class="contact-card">
-                            <a href="https://linkedin.com/in/oxamarvel" target="_blank" class="contact-link">
-                                <div class="contact-title">LinkedIn</div>
-                                <div class="contact-notes">/in/oxamarvel</div>
-                            </a>
-                        </div>
-
-                        <div class="contact-card">
-                            <a href="https://behance.net/oxamarvel" target="_blank" class="contact-link">
-                                <div class="contact-title">Behance</div>
-                                <div class="contact-notes">/oxamarvel</div>
-                            </a>
-                        </div>
+            
+            <section class="archive-section">
+                
+                
+                <a href="#" class="archive-card-midleft">
+                    <figure class="archive-card">
+                        <img class="archive-card" src="assets/black hole.png" alt="Project 1">
+                    </figure>
+                    <div class="archive-card-info">
+                        <!-- <span>01</span> -->
+                        <span>BLACKHOLE: DISCRETE (REFRACTION) APPROACH</span>
                     </div>
-                </section>
+                </a>
 
-            </div>
+
+                <a href="#" class="archive-card-left">
+                    <figure class="archive-card">
+                        <img  src="assets/mbulb0.jpg" alt="Project 1">
+                    </figure>
+                    <div class="archive-card-info">
+                        <!-- <span>01</span> -->
+                        <span>3D FRACTAL: MANDELBULB</span>
+                    </div>
+                </a>
+
+
+                <a href="#" class="archive-card-midright" style="margin-bottom: 30dvh;">
+                    <figure class="archive-card">
+                        <img class="archive-card" src="assets/drifting boat.png" alt="Project 1">
+                    </figure>
+                    <div class="archive-card-info">
+                        <!-- <span>01</span> -->
+                        <span>LOST AT SEA</span>
+                    </div>
+                </a>
+            </section>
         </main>
 
 
-
-        <footer class="footer">
+        <footer class="footer" style="top: 94dvh; position: fixed;">
             <section class="footer-grid">
                 <p>© 2026</p>
                 <p>DESIGNED & DEVELOPED BY OXA</p>
@@ -107,37 +103,7 @@
                 column.className = 'grid-column';
                 gridOverlay.appendChild(column);
             }
-
-            // Toggle grid visibility
-            function toggleGrid() {
-                const body = document.body;
-                body.classList.toggle('debug');
-                
-                const gridOverlay = document.getElementById('gridOverlay');
-                const currentOpacity = window.getComputedStyle(gridOverlay).opacity;
-                gridOverlay.style.opacity = currentOpacity === '0.3' ? '0.7' : '0.3';
-            }
         </script>
-
-
-        <!-- Copy Email Script-->
-        <script>
-            const emailCard = document.querySelector('.email-card');
-
-            emailCard.addEventListener('click', () => {
-                const emailElement = emailCard.querySelector('.copy-email');
-                const email = emailElement.dataset.email;
-
-                navigator.clipboard.writeText(email).then(() => {
-                    emailElement.textContent = 'Email Copied!';
-
-                    setTimeout(() => {
-                        emailElement.textContent = email;
-                    }, 2000);
-                });
-            });
-        </script>
-
         
     </body>
 </html>
