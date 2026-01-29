@@ -419,17 +419,32 @@ body {
 
 
 /* project.html */
-.project1 {
+/* .project1 {
 	display: grid;
 	grid-template-columns: repeat(var(--grid-columns), 1fr);
 	gap: var(--gutter-width);
 	align-items: start;
 	position: fixed;
 	margin-right: var(--page-padding);
+} */
+
+.project1 {
+	width: calc(4 * var(--column-width100) + 3 * var(--gutter-width100));
+	position: fixed;
+	margin-right: var(--page-padding);
 }
 
-.project-info {
+/* .project-info {
 	grid-column: span 4;
+	height: 83vh;
+	padding-bottom: 2vh;
+
+	display: flex;
+  	flex-direction: column;
+	justify-content: space-between;
+} */
+
+.project-info {
 	height: 83vh;
 	padding-bottom: 2vh;
 
