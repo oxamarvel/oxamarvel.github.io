@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Oxa Marvel — Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+
+
+
+    <body>
+
+        <div class="grid-overlay" id="gridOverlay"></div>
+        
+
+        <header class="header">
+            <nav class="header-grid">
+                
+                <div class="nav-brand">
+                    <a href="index.html" class="nav-link">OXA MARVEL</a>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="about.html" class="nav-link">ABOUT ME</a>
+                </div>
+
+                <div class="nav-links">
+                    <a href="archive.html" class="nav-link">ARCHIVE</a>
+                </div>
+            </nav>
+        </header>
+
+
+        <main class="main">
+
+            <div class="project1x">
+
+                <section class="project-infox">
+                    <div class="project-titlex">
+                        <h1>SAND DRIFT</h1>
+                    </div>
+
+                    <div class="project-descx">
+                        <div class="project-creditsx">
+                            <ul>
+                                <li><span class="credit-labelx">YEAR</span>2023</li>
+                                <li><span class="credit-labelx">ROLE</span>3D GENERALIST</li>
+                                <!-- <li><span class="credit-label">PUBLICATION</span>itch.io</li> -->
+                            </ul>
+                        </div>
+
+                        <div class="project-introx">
+                            <p>A personal study of procedural terrain workflows, rigid body vehicle simulation, and cinematography in Blender</p>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+
+            <div class="project2">
+                
+                <section class="project-docs">
+
+                    
+                    <section class="doc-section">
+                        <figure style="margin-top: 0;">
+                            <video autoplay controls muted loop>
+                                <source src="assets/sand_drift.mp4" type="video/mp4">
+                            </video>
+                        </figure>
+                    </section>
+
+
+                    <section class="doc-section">
+                        <h2>Project Intent & Inspiration</h2>
+
+                        <figure>
+                            <img src="assets/start.png" alt="Blockout mesh" />
+                        </figure>
+
+
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>Sand Drift is a personal 3D project exploring cinematic vehicle motion in a vast desert environment.</p>
+                                <p>The goal was to recreate the visual language of automotive advertisements—emphasizing scale, power, and controlled chaos through dust, motion, and lighting.</p>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="doc-section">
+                        <h2>Procedural Dune Landscape</h2>
+
+                        <figure>
+                            <img src="assets/mountain_geometry.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>The dune environment was built using procedural geometry, implementing noise-based height variation to form large-scale mountain ranges.</p>
+                                <p>This non-destructive approach allowed rapid iteration and flexible scale adjustments while maintaining natural variation and believable erosion patterns.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="doc-section">
+                        <h2>Procedural Sandstone Shading</h2>
+
+                        <figure>
+                            <img src="assets/sanstone_shader.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>All terrain materials, including sandstone mountains and sand surfaces, were created using procedural shaders.</p>
+                                <p>Layered noise and displacement were used to avoid image textures, ensuring consistency across scale while preserving natural surface variation.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="doc-section">
+                        <h2>Volumetric Dust</h2>
+
+                        <figure>
+                            <img src="assets/volumetric_dust.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>To enhance atmospheric ambience, volumetric dust was introduced to simulate wind-blown sand commonly found in desert environments.</p>
+                                <p>Density and movement were driven by noise and directional controls, carefully tuned to avoid overpowering the vehicle’s silhouette.</p>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section class="doc-section">
+                        <h2>Subdivision Modeling & Motion Through Physics</h2>
+
+                        <figure>
+                            <img src="assets/car_subdivision.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>The vehicle was inspired by off-road car designs and modeled in Blender using subdivision techniques.</p>
+                            </div>
+                        </div>
+
+
+                        <figure style="margin-top: 3.7rem;">
+                            <img src="assets/car_physics.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>Instead of manual keyframing, vehicle motion was driven using rigid body simulation to achieve natural weight transfer and responsive suspension behavior.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="doc-section">
+                        <h2>Lighting & Camera Direction</h2>
+
+                        <figure>
+                            <img src="assets/camera.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>Natural lighting was introduced to establish a realistic desert mood and strong form definition.</p>
+                                <p>Camera direction was designed to follow automotive advertisement conventions, using multiple angles, longer lenses, and controlled highlights to emphasize motion and silhouette.</p>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section class="doc-section" style="margin-bottom: 8dvh;">
+                        <h2>Reflection & Learnings</h2>
+
+                        <figure>
+                            <img src="assets/end.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc-section" >
+                            <div class="doc-desc-list">
+                                <div class="doc-list">
+                                    <p>Key Learnings</p>
+                                    <ul>
+                                        <li>Procedural workflows significantly improve iteration speed and flexibility.</li>
+                                        <li>Physics-based motion adds subtle realism that is difficult to achieve through manual animation.</li>
+                                    </ul>
+                                </div>
+                                <div class="doc-list">
+                                    <p>Future Improvements</p>
+                                    <ul>
+                                        <li>Add texture painting and advanced shading to introduce wear, dust, scratches, and surface detail.</li>
+                                        <li>Implement a particle-based dust trail system for stronger wheel–terrain interaction.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+                </section>
+            </div>
+        </main>
+
+
+        <!-- Grid Overlay -->
+        <script>
+            // Generate grid columns dynamically
+            const gridOverlay = document.getElementById('gridOverlay');
+            const columns = getComputedStyle(document.documentElement)
+                .getPropertyValue('--grid-columns')
+                .trim();
+            
+            // Create column divs
+            for (let i = 0; i < parseInt(columns); i++) {
+                const column = document.createElement('div');
+                column.className = 'grid-column';
+                gridOverlay.appendChild(column);
+            }
+        </script>
+        
+    </body>
+</html>
