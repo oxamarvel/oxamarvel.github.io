@@ -355,12 +355,16 @@ body {
 	text-align: center;
 }
 
+.archive-title h1 {
+  	color: var(--ter-text-color);
+}
+
 .archive-title p {
 	margin-top: 1rem;
 	font-family: "Space Mono", monospace;
   	font-weight: 400;
   	font-size: 0.7rem;
-  	color: var(--prim-text-color);
+  	color: var(--ter-text-color);
 }
 
 .archive-section {
