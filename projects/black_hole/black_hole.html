@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Oxa Marvel — Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+
+
+
+    <body>
+
+        <div class="grid-overlay" id="gridOverlay"></div>
+        
+
+        <header class="header">
+            <nav class="header-grid">
+                
+                <div class="nav-brand">
+                    <a href="../../index.html" class="nav-link">OXA MARVEL</a>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="../../about.html" class="nav-link">ABOUT ME</a>
+                </div>
+
+                <div class="nav-links">
+                    <a href="../../archive.html" class="nav-link">ARCHIVE</a>
+                </div>
+            </nav>
+        </header>
+
+
+        <main class="main">
+
+            <div class="project1">
+
+                <section class="project-info">
+                    <div class="project-title">
+                        <h1>BLACK HOLE: DISCRETE APPROACH</h1>
+                    </div>
+
+                    <div class="project-desc">
+                        <div class="project-credits">
+                            <ul>
+                                <li><span class="credit-label">YEAR</span>2023</li>
+                                <li><span class="credit-label">ROLE</span>3D GENERALIST</li>
+                                <!-- <li><span class="credit-label">PUBLICATION</span>itch.io</li> -->
+                            </ul>
+                        </div>
+
+                        <div class="project-intro">
+                            <p>A technical study of black hole–like gravitational lensing using discrete refraction in Blender.</p>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+
+            <div class="project2">
+                
+                <section class="project-docs">
+
+                    <section class="doc-section">
+                        <figure style="margin-top: 0;">
+                            <img src="assets/black hole top.png" alt="Blockout mesh" />
+                        </figure>
+
+
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>This project investigates whether discrete optical approximations can reproduce visually comparable gravitational lensing effects within standard 3D rendering pipelines, while operating at significantly lower computational cost than continuous general-relativistic photon geodesic ray tracing methods.</p>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="doc-section">
+                        <h2>The Science Behind Gravitational Lensing</h2>
+
+                        <figure>
+                            <img src="assets/lensing.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>Gravitational lensing near a black hole arises from strong spacetime curvature, causing photon trajectories to deviate from straight-line propagation. In the vicinity of the event horizon, light can undergo extreme deflection, forming ring-like structures and multiple apparent images.</p>
+                            </div>
+                        </div>
+                    </section>
+
+
+
+
+                    <section class="doc-section">
+                        <h2>Discrete Approach Gravitaional Lensing</h2>
+
+                        <figure>
+                            <img src="assets/refract.jpg" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>This project implements a discrete lensing approximation in Blender using multiple concentric refractive spheres. Each sphere applies a controlled refraction step, cumulatively approximating continuous light bending.</p>
+                                <p>By tuning index of refraction, spacing, and layer count, the system emulates increasing curvature intensity toward the center, enabling black hole–like lensing effects within a conventional raster/path-tracing workflow.</p>
+                            </div>
+                        </div>
+                    </section>
+
+
+
+                    <section class="doc-section">
+                        <h2>Accretion Disc Implementation</h2>
+
+                        <figure>
+                            <img src="assets/accretion.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc-section">
+                            <div class="doc-desc">
+                                <p>The accretion disc is represented as a volumetric structure surrounding the lensing system, modeling heated gas drawn into orbital motion by strong gravitational influence.</p>
+                                <p>A volumetric material is mapped using spherical coordinates to maintain radial coherence under distortion. Procedural noise fields control density and turbulence, while an emission shader visualizes thermal radiation, producing brightness gradients that intensify toward the inner region.</p>
+                            </div>
+                        </div>
+
+                    </section>
+
+
+
+
+                    <section class="doc-section" style="margin-bottom: 8dvh;">
+                        <h2>Reflection & Learnings</h2>
+
+                        <figure>
+                            <img src="assets/black hole side.png" alt="Blockout mesh" />
+                        </figure>
+
+                        <div class="doc-desc-section" >
+                            <div class="doc-desc-list">
+                                <div class="doc-list">
+                                    <p>Key Learnings</p>
+                                    <ul>
+                                        <li>Discrete systems can approximate complex continuous phenomena through accumulation.</li>
+                                        <li>Layer count and refractive index strongly influence perceived curvature.</li>
+                                        <li>Visual plausibility can be achieved without physically accurate simulation.</li>
+                                    </ul>
+                                </div>
+                                <div class="doc-list">
+                                    <p>Future Implementation</p>
+                                    <ul>
+                                        <li>Implement layer refraction adaptivity near the event horizon region.</li>
+                                        <li>Explore hybrid models combining discrete refraction with screen-space distortion.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+
+
+                </section>
+            </div>
+        </main>
+
+
+        <!-- Grid Overlay -->
+        <script>
+            // Generate grid columns dynamically
+            const gridOverlay = document.getElementById('gridOverlay');
+            const columns = getComputedStyle(document.documentElement)
+                .getPropertyValue('--grid-columns')
+                .trim();
+            
+            // Create column divs
+            for (let i = 0; i < parseInt(columns); i++) {
+                const column = document.createElement('div');
+                column.className = 'grid-column';
+                gridOverlay.appendChild(column);
+            }
+        </script>
+        
+    </body>
+</html>
