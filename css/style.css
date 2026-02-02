@@ -69,7 +69,7 @@ body {
     display: grid;
     grid-template-columns: repeat(var(--grid-columns), 1fr);
     gap: var(--gutter-width);
-    padding: 0 var(--page-padding)	; /* Side margins */
+    padding: 0 var(--page-padding); /* Side margins */
     opacity: 0.8; /* Adjust visibility */
 }
 
@@ -92,8 +92,8 @@ body {
 /* header */
 .header {
 	width: 100%;
-	height: 7vh;
-  	padding: 2vh var(--page-padding) 3vh;
+	height: 7dvh;
+  	padding: 2dvh var(--page-padding) 3dvh;
 	position: fixed;
 }
 
@@ -130,7 +130,7 @@ body {
 
 /* main */
 .main {
-  	padding: 9vh var(--page-padding) 2vh;
+  	padding: 9dvh var(--page-padding) 2dvh;
 }
 /* main */
 
@@ -138,8 +138,8 @@ body {
 /* footer */
 .footer {
 	width: 100%;
-	height: 6vh;
-	padding: 2vh var(--page-padding);
+	height: 6dvh;
+	padding: 2dvh var(--page-padding);
 	
 	font-family: "Space Mono", monospace;
 	font-weight: 400;
@@ -169,11 +169,11 @@ body {
 
 /* index.html */
 .hero-section {
-	height: 50vh;
+	height: 50dvh;
 	display: grid;
     grid-template-columns: repeat(var(--grid-columns), 1fr);
     gap: var(--gutter-width);
-	padding-bottom: 10vh;
+	padding-bottom: 10dvh;
 
 	align-items: flex-end;
 }
@@ -209,7 +209,7 @@ body {
 	display: grid;
     grid-template-columns: repeat(var(--grid-columns), 1fr);
     column-gap: var(--gutter-width);
-	height: 33vh;
+	height: 33dvh;
 
     align-items: flex-end;
 }
@@ -250,13 +250,13 @@ body {
     grid-template-columns: repeat(var(--grid-columns), 1fr);
     gap: var(--gutter-width);
     align-items: start;
-	height: 83vh;
+	height: 83dvh;
 }
 
 .bio-column {
 	grid-column: span 5;
-	height: 83vh;
-	padding-bottom: 2vh;
+	height: 83dvh;
+	padding-bottom: 2dvh;
 
 	display: flex;
   	flex-direction: column;
@@ -276,8 +276,8 @@ body {
 
 .profile-column {
 	grid-column: 9 / span 4;
-	height: 83vh;
-	padding-bottom: 2vh;
+	height: 83dvh;
+	padding-bottom: 2dvh;
 
 	display: flex;
   	flex-direction: column;
@@ -299,7 +299,7 @@ body {
 
 .contact-card {
 	grid-column: span 2;
-	height: 7vh;
+	height: 7dvh;
 
 	display: flex;
 	flex-direction: column;
@@ -435,8 +435,8 @@ body {
 }
 
 .project-info {
-	height: 83vh;
-	padding-bottom: 2vh;
+	height: 83dvh;
+	padding-bottom: 2dvh;
 
 	display: flex;
   	flex-direction: column;
@@ -444,12 +444,12 @@ body {
 }
 
 .project-title h1 {
-	height: 23vh;
+	height: 23dvh;
 	font-size: clamp(3rem, 8vw, 4rem);
 }
 
 .project-desc {
-	height: 45vh;
+	height: 45dvh;
 	display: flex;
   	flex-direction: column;
 	justify-content: space-between;
@@ -574,7 +574,7 @@ body {
 
 .doc-list ul {
 	display: grid;
-	padding-left: 2vw;
+	padding-left: 2dvw;
 	gap: 0.5rem;
 }
 /* project.html */
