@@ -194,20 +194,7 @@
 
 
         <!-- Grid Overlay -->
-        <script>
-            // Generate grid columns dynamically
-            const gridOverlay = document.getElementById('gridOverlay');
-            const columns = getComputedStyle(document.documentElement)
-                .getPropertyValue('--grid-columns')
-                .trim();
-            
-            // Create column divs
-            for (let i = 0; i < parseInt(columns); i++) {
-                const column = document.createElement('div');
-                column.className = 'grid-column';
-                gridOverlay.appendChild(column);
-            }
-        </script>
+        <script type="module" src="script/gridOverlay.js"></script>
         
     </body>
 </html>
