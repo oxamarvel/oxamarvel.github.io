@@ -101,7 +101,7 @@ body {
 /* header */
 .header {
 	position: fixed;
-    z-index: 999;
+    z-index: 9999;
 
 	width: 100%;
 	height: 7dvh;
@@ -162,7 +162,7 @@ body {
 }
 
 .nav-right {
-	grid-column: 10 / span 3;
+	grid-column: 9 / span 3;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	column-gap: var(--gutter-width);
@@ -201,11 +201,11 @@ body {
 }
 
 .footer-grid p:first-child {
-	grid-column: span 8;
+	grid-column: 1 / span 1;
 }
 
 .footer-grid p:last-child {
-	grid-column: span 4;
+	grid-column: 9 / span 2;
 }
 /* footer */
 
@@ -226,11 +226,11 @@ body {
 }
 
 .hero-name {
-	grid-column: span 8;
+	grid-column: 1 / span 7;
 }
 
 .hero-info {
-	grid-column: span 4;
+	grid-column: 9 / span 3;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
@@ -645,7 +645,6 @@ body {
 .project-overlay {
 	position: fixed;
     top: 100dvh;
-	z-index:99;
 
 	width: 100dvw;
 	height: 100dvh;
@@ -666,4 +665,5 @@ body {
 
 .project-overlay-content {
 	padding: 9dvh var(--page-padding) 2dvh;
+	z-index: 999;
 }
