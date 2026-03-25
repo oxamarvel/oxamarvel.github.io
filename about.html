@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8">
         <title>Oxa Marvel — Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -13,28 +15,21 @@
 
 
     <body>
-
         <div class="grid-overlay" id="gridOverlay"></div>
 
-        
         <header class="header">
             <nav class="header-grid">
-                
-                <div class="nav-brand">
-                    <a href="index.html">OXA MARVEL</a>
+                <div class="nav-left">
+					<button id="backButton">BACK</button>
                 </div>
                 
-                <div class="nav-links">
-                    <a href="about.html">ABOUT ME</a>
-                </div>
-
-                <div class="nav-links">
+                <div class="nav-right">
+                    <a href="index.html">HOME</a>
+                    <a href="about.html">ABOUT</a>
                     <a href="archive.html">ARCHIVE</a>
                 </div>
-
             </nav>
         </header>
-
 
         <main class="main">
 
@@ -54,6 +49,12 @@
                     <img src="assets/photo_for_id.jpg" alt="Oxa Marvel" class="profile-pic">
 
                     <div class="contact-grid">
+                        <div class="contact-card">
+                            <a href="assets/oxa-marvel-resume.pdf" download class="contact-link resume-link">
+                                <div class="contact-title">Resume</div>
+                                <div class="contact-notes">PDF FILE</div>
+                            </a>
+                        </div>
                         
                         <div class="contact-card">
                             <div class="contact-link email-link">
@@ -70,16 +71,9 @@
                         </div>
 
                         <div class="contact-card">
-                            <a href="https://github.com/oxamarvel" target="_blank" class="contact-link">
-                                <div class="contact-title">GitHub</div>
+                            <a href="https://www.behance.net/oxamarvel" target="_blank" class="contact-link">
+                                <div class="contact-title">Behance</div>
                                 <div class="contact-notes">/OXAMARVEL</div>
-                            </a>
-                        </div>
-
-                        <div class="contact-card">
-                            <a href="https://instagram.com/mirabilia.studio" target="_blank" class="contact-link">
-                                <div class="contact-title">Instagram</div>
-                                <div class="contact-notes">/MIRABILIA.STUDIO</div>
                             </a>
                         </div>
                     </div>
@@ -87,8 +81,6 @@
 
             </div>
         </main>
-
-
 
         <footer class="footer">
             <section class="footer-grid">
@@ -98,7 +90,7 @@
         </footer>
 
 
-        <!-- Grid Overlay -->
+
         <script type="module" src="script/gridOverlay.js"></script>
 
         <!-- Contact Notes Script-->
@@ -112,7 +104,13 @@
                 link.addEventListener('mouseenter', () => {
                     if (link.classList.contains('email-link')) {
                         notesElement.textContent = 'COPY EMAIL ADDRESS';
-                    } else {
+                    }
+
+                    else if (link.classList.contains('resume-link')) {
+                        notesElement.textContent = 'DOWNLOAD RESUME';
+                    }
+                    
+                    else {
                         notesElement.textContent = 'VISIT PROFILE';
                     }
                 });
@@ -131,7 +129,16 @@
                             }, 3000);
                         });
                     });
-                }
+                };
+
+                if (link.classList.contains('resume-link')) {
+                    link.addEventListener('click', () => {
+                        notesElement.textContent = 'RESUME DOWNLOADED';
+                        setTimeout(() => {
+                            notesElement.textContent = originalText;
+                        }, 3000);
+                    });
+                };
             });
         </script>
 
