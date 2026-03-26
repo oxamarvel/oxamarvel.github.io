@@ -2,7 +2,7 @@ const projectOverlay = document.getElementById("projectOverlay")
 const projectOverlayContent = document.getElementById("projectOverlayContent")
 const backButton = document.getElementById("backButton")
 
-const gridOverlay = document.getElementById("gridOverlay")
+// const gridOverlay = document.getElementById("gridOverlay")
 
 async function openProject(slug){
 
