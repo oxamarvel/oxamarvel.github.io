@@ -8,22 +8,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/typography.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     </head>
 
-
-
     <body>
         <div class="grid-overlay" id="gridOverlay"></div>
 
-        <header class="header">
-            <nav class="header-grid">
-                <div class="nav-left">
-					<button id="backButton">BACK</button>
+        <header class="header font-mono text-callout">
+			<nav class="grid-12">
+				<div class="nav-left">
+					<button id="backButton" class="font-mono">BACK</button>
                 </div>
-                
+
                 <div class="nav-right">
                     <a href="index.html">HOME</a>
                     <a href="about.html">ABOUT</a>
@@ -33,73 +33,65 @@
         </header>
 
         <main class="main">
-
-            <div class="about-section">
-
+            <div class="about-section grid-12">
                 <section class="bio-column">
-                    <h1>ABOUT ME</h1>
+                    <h1 class="font-inter text-display0">ABOUT ME</h1>
 
-                    <div class="bio-intro">
+                    <div class="bio font-inter text-body">
                         <p>Product Designer and Visual Artist with a multidisciplinary background spanning UI/UX design, 3D production, technical systems, and project management.</p>
                         <p>Currently focusing on interactive experiences across real-time and game development environments. </p>
                     </div>
                 </section>
 
                 <section class="profile-column">
-
                     <img src="assets/photo_for_id.jpg" alt="Oxa Marvel" class="profile-pic">
 
                     <div class="contact-grid">
                         <div class="contact-card">
                             <a href="assets/oxa-marvel-resume.pdf" download class="contact-link resume-link">
                                 <div class="contact-title">Resume</div>
-                                <div class="contact-notes">PDF/2026</div>
+                                <div class="contact-notes font-mono text-label">PDF/2026</div>
                             </a>
                         </div>
                         
                         <div class="contact-card">
                             <div class="contact-link email-link">
                                 <div class="contact-title">Email</div>
-                                <div class="contact-notes">OXAMARVEL@GMAIL.COM</div>
+                                <div class="contact-notes font-mono text-label">OXAMARVEL@GMAIL.COM</div>
                             </div>
                         </div>
 
                         <div class="contact-card">
                             <a href="https://linkedin.com/in/oxamarvel" target="_blank" class="contact-link">
                                 <div class="contact-title">LinkedIn</div>
-                                <div class="contact-notes">/IN/OXAMARVEL</div>
+                                <div class="contact-notes font-mono text-label">/IN/OXAMARVEL</div>
                             </a>
                         </div>
 
                         <div class="contact-card">
                             <a href="https://www.behance.net/oxamarvel" target="_blank" class="contact-link">
                                 <div class="contact-title">Behance</div>
-                                <div class="contact-notes">/OXAMARVEL</div>
+                                <div class="contact-notes font-mono text-label">/OXAMARVEL</div>
                             </a>
                         </div>
                     </div>
                 </section>
-
             </div>
         </main>
 
-        <footer class="footer">
-            <section class="footer-grid">
-                <p>© 2026</p>
-                <p>DESIGNED & DEVELOPED BY OXA</p>
-            </section>
+        <footer class="grid-12 footer font-mono text-note">
+            <p class="footer-year">© 2026</p>
+            <p class="footer-dev">DESIGNED & DEVELOPED BY OXA</p>
         </footer>
 
 
 
         <script type="module" src="script/gridOverlay.js"></script>
-
-        <!-- Contact Notes Script-->
-        <script>
+        <script> //Contact Notes Script
             const contactLinks = document.querySelectorAll('.contact-link');
 
             contactLinks.forEach(link => {
-                const notesElement = link.querySelector('.contact-notes');
+                const notesElement = link.querySelector('.text-label');
                 const originalText = notesElement.textContent;
 
                 link.addEventListener('mouseenter', () => {

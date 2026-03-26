@@ -8,20 +8,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/typography.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     </head>
 
-
-
     <body>
         <div class="grid-overlay" id="gridOverlay"></div>
 
-        <header class="header">
-			<nav class="header-grid">
+        <header class="header font-mono text-callout">
+			<nav class="grid-12">
 				<div class="nav-left">
-					<button id="backButton">BACK</button>
+					<button id="backButton" class="font-mono">BACK</button>
                 </div>
 
                 <div class="nav-right">
@@ -32,15 +32,12 @@
             </nav>
         </header>
 
-
         <main class="main">
-            
             <section class="hero-section">
-                <h1 class="hero-name">
+                <h1 class="hero-name font-inter text-display0">
                     OXA MARVEL<br>
                     ILMAN THAARIQ
                 </h1>
-
                 <aside class="hero-info">
                     <span id="typing-text"></span>
                     <p>from Indonesia</p>
@@ -48,10 +45,9 @@
             </section>
 
             <section class="projects-section">
-
                 <div onclick="openProject('sand-drift')" class="project-card">
                     <img src="projects/assets/sand-drift_menu.png" alt="Project 1">
-                    <div class="project-card-info">
+                    <div class="project-card-info font-mono text-label">
                         <span>01</span>
                         <span>SAND DRIFT</span>
                     </div>
@@ -59,7 +55,7 @@
 
                 <div onclick="openProject('oxa-constructed')" class="project-card">
                     <img src="projects/assets/oxa-constructed.png" alt="Project 2">
-                    <div class="project-card-info">
+                    <div class="project-card-info font-mono text-label">
                         <span>02</span>
                         <span>OXA: CONSTRUCTED</span>
                     </div>
@@ -67,7 +63,7 @@
 
                 <div onclick="openProject('score-up')" class="project-card">
                     <img src="projects/assets/score-up_menu.png" alt="Project 3">
-                    <div class="project-card-info">
+                    <div class="project-card-info font-mono text-label">
                         <span>03</span>
                         <span>SCORE UP!</span>
                     </div>
@@ -75,24 +71,18 @@
 
                 <div onclick="openProject('chandrasekhar')" class="project-card">
                     <img src="projects/assets/chandrasekhar_menu.png" alt="Project 4">
-                    <div class="project-card-info">
+                    <div class="project-card-info font-mono text-label">
                         <span>04</span>
                         <span>CHANDRA SEKHAR</span>
                     </div>
                 </div>
-
             </section>
         </main>
 
-
-
-        <footer class="footer">
-            <section class="footer-grid">
-                <p>© 2026</p>
-                <p>DESIGNED & DEVELOPED BY OXA</p>
-            </section>
+        <footer class="grid-12 footer font-mono text-note">
+            <p class="footer-year">© 2026</p>
+            <p class="footer-dev">DESIGNED & DEVELOPED BY OXA</p>
         </footer>
-
 
 		<div id="projectOverlay" class="project-overlay">
 			<div id="projectOverlayContent" class="project-overlay-content"></div>
@@ -100,9 +90,7 @@
 
 
         <script type="module" src="script/gridOverlay.js"></script>
-
-        <!-- Typing Text Script -->
-        <script>
+        <script> //Typing Text Script
             const texts = [
                 "3D Generalist",
                 "Technical Artist",
@@ -136,9 +124,7 @@
 
             typeLoop();
         </script>
-
-        <!-- Project Hover Script -->
-        <script>
+        <script> //Project Hover Script
             const projectCards = document.querySelectorAll('.project-card');
 
             projectCards.forEach(card => {
@@ -157,7 +143,6 @@
                 });
             });
         </script>
-
 		<script src="script/projectOverlay.js"></script>
 
     </body>

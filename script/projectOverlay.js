@@ -12,7 +12,7 @@ async function openProject(slug){
 	projectOverlayContent.innerHTML = html
 
 	projectOverlay.classList.add("active")
-	backButton.style.display = "block"
+	backButton.style.display = "inline-block"
 	document.body.style.overflow = "hidden"
 
 	// gridOverlay.style.zIndex = "99"

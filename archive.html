@@ -8,25 +8,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/typography.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     </head>
 
-
-
     <body>
         <div class="grid-overlay" id="gridOverlay"></div>
 
         <section class="archive-title">
-            <h1>ARCHIVE</h1>
-            <p>SCROLL TO DISCOVER MY OTHER PROJECTS</p>
+            <h1 class="font-inter text-display1">ARCHIVE</h1>
+            <p class="font-mono text-note">SCROLL TO DISCOVER MY OTHER WORKS</p>
         </section>
 
-        <header class="header">
-			<nav class="header-grid">
+        <header class="header font-mono text-callout">
+			<nav class="grid-12">
 				<div class="nav-left">
-					<button id="backButton">BACK</button>
+					<button id="backButton" class="font-mono">BACK</button>
                 </div>
 
                 <div class="nav-right">
@@ -38,90 +38,62 @@
         </header>
 
         <main class="main">
-            
-            <section class="archive-section">
-
-                <div onclick="openProject('kopling')" class="archive-card-midleft">
-                    <figure class="archive-card">
-                        <img src="projects/assets/kopling_mainmenu.png" alt="Project 1">
-                    </figure>
-                    <div class="archive-card-info">
+            <section class="grid-12 archive-section">
+                <div onclick="openProject('kopling')" class="archive-card archive-card-top archive-card-midleft">
+                    <img src="projects/assets/kopling_mainmenu.png" alt="Project 1">
+                    <div class="archive-card-info font-mono text-label">
                         <span>KOPLING: GAME DESIGN DOCUMENTATION</span>
                     </div>
                 </div>
 
-
-                <div onclick="openProject('fractal-series')" class="archive-card-left">
-                    <figure class="archive-card">
-                        <img src="projects/assets/fractal-series_mbulb0.jpg" alt="Project 1">
-                    </figure>
-                    <div class="archive-card-info">
+                <div onclick="openProject('fractal-series')" class="archive-card archive-card-left">
+                    <img src="projects/assets/fractal-series_mbulb0.jpg" alt="Project 1">
+                    <div class="archive-card-info font-mono text-label">
                         <span>FRACTAL SERIES</span>
                     </div>
                 </div>
-                
-                
-                <div onclick="openProject('black-hole')" class="archive-card-midright">
-                    <figure class="archive-card">
-                        <img src="projects/assets/black-hole_top.png" alt="Project 1">
-                    </figure>
-                    <div class="archive-card-info">
+
+                <div onclick="openProject('black-hole')" class="archive-card archive-card-midright">
+                    <img src="projects/assets/black-hole_top.png" alt="Project 1">
+                    <div class="archive-card-info font-mono text-label">
                         <span>BLACK HOLE: DISCRETE APPROACH</span>
                     </div>
                 </div>
 
-
-                <div onclick="openProject('')" class="archive-card-right">
-                    <figure class="archive-card">
-                        <img src="projects/assets/math.png" alt="Project 1">
-                    </figure>
-                    <div class="archive-card-info">
+                <div onclick="openProject('')" class="archive-card archive-card-right">
+                    <img src="projects/assets/math.png" alt="Project 1">
+                    <div class="archive-card-info font-mono text-label">
                         <span>MATHEMATICS PROOF VIDEOS</span>
                     </div>
                 </div>
 
-
-                <div onclick="openProject('')" class="archive-card-midleft">
-                    <figure class="archive-card">
-                        <img src="projects/assets/drifting-boat.png" alt="Project 1">
-                    </figure>
-                    <div class="archive-card-info">
+                <div onclick="openProject('')" class="archive-card archive-card-midleft">
+                    <img src="projects/assets/drifting-boat.png" alt="Project 1">
+                    <div class="archive-card-info font-mono text-label">
                         <span>LOST AT SEA</span>
                     </div>
                 </div>
 
-
-                <div onclick="openProject('')" class="archive-card-left">
-                    <figure class="archive-card">
-                        <img src="projects/assets/star.png" alt="Project 1">
-                    </figure>
-                    <div class="archive-card-info">
+                <div onclick="openProject('')" class="archive-card archive-card-left">
+                    <img src="projects/assets/star.png" alt="Project 1">
+                    <div class="archive-card-info font-mono text-label">
                         <span>ALTAIR</span>
                     </div>
                 </div>
 
-
-                <div onclick="openProject('')" class="archive-card-midright archive-card-bottom">
-                    <figure class="archive-card">
-                        <img src="projects/assets/material.png" alt="Project 1">
-                    </figure>
-                    <div class="archive-card-info">
+                <div onclick="openProject('')" class="archive-card archive-card-midright archive-card-bottom">
+                    <img src="projects/assets/material.png" alt="Project 1">
+                    <div class="archive-card-info font-mono text-label">
                         <span>BLENDER MATERIAL LIBRARY</span>
                     </div>
                 </div>
-
             </section>
         </main>
 
-
-        <footer class="footer" style="top: 94dvh; position: fixed;">
-            <section class="footer-grid">
-                <p>© 2026</p>
-                <p>DESIGNED & DEVELOPED BY OXA</p>
-            </section>
+        <footer class="grid-12 footer footer-archive font-mono text-note">
+            <p class="footer-year">© 2026</p>
+            <p class="footer-dev">DESIGNED & DEVELOPED BY OXA</p>
         </footer>
-
-
 
 		<div id="projectOverlay" class="project-overlay">
 			<div id="projectOverlayContent" class="project-overlay-content"></div>
@@ -133,5 +105,4 @@
 		<script src="script/projectOverlay.js"></script>
         
     </body>
-    
 </html>
