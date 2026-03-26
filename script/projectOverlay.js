@@ -2,7 +2,6 @@ const projectOverlay = document.getElementById("projectOverlay")
 const projectOverlayContent = document.getElementById("projectOverlayContent")
 const backButton = document.getElementById("backButton")
 
-// const gridOverlay = document.getElementById("gridOverlay")
 
 async function openProject(slug){
 
@@ -14,8 +13,6 @@ async function openProject(slug){
 	projectOverlay.classList.add("active")
 	backButton.style.display = "inline-block"
 	document.body.style.overflow = "hidden"
-
-	// gridOverlay.style.zIndex = "99"
 
 	projectOverlay.scrollTo({
 		top: 0,
@@ -29,8 +26,6 @@ function closeProject(){
 	projectOverlay.classList.remove("active")
 	backButton.style.display = "none"
 	document.body.style.overflow = "auto"
-
-	gridOverlay.style.zIndex = "-2"
 
 	history.pushState("", document.title, window.location.pathname)
 }
