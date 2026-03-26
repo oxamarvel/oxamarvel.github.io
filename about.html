@@ -48,7 +48,7 @@
 
                     <div class="contact-grid">
                         <div class="contact-card">
-                            <a href="assets/oxa-marvel-resume.pdf" download class="contact-link resume-link">
+                            <a href="assets/oxa-marvel-resume.pdf" target="_blank" class="contact-link resume-link">
                                 <div class="contact-title">Resume</div>
                                 <div class="contact-notes font-mono text-label">PDF/2026</div>
                             </a>
@@ -100,7 +100,7 @@
                     }
 
                     else if (link.classList.contains('resume-link')) {
-                        notesElement.textContent = 'DOWNLOAD RESUME';
+                        notesElement.textContent = 'VIEW RESUME';
                     }
                     
                     else {
@@ -121,15 +121,6 @@
                                 notesElement.textContent = originalText;
                             }, 3000);
                         });
-                    });
-                };
-
-                if (link.classList.contains('resume-link')) {
-                    link.addEventListener('click', () => {
-                        notesElement.textContent = 'RESUME DOWNLOADED';
-                        setTimeout(() => {
-                            notesElement.textContent = originalText;
-                        }, 3000);
                     });
                 };
             });
